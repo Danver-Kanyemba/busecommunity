@@ -7,6 +7,20 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  items: any = ['e',2,2,2,2];
 
+  constructor() {}
+  hi(){
+    console.log(
+      'testok'
+    );
+
+  }
+
+  hi2(fugazy: any){
+    console.log(
+      fugazy
+    );
+
+  }
 }
