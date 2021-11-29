@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stories.page.scss'],
 })
 export class StoriesPage implements OnInit {
+  items: any = ['e',2,2,2,2];
+
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  hi(){
+    console.log(
+      'testok'
+    );
+
+  }
+
+  hi2(fugazy: any){
+    console.log(
+      fugazy
+    );
+
+  }
 }

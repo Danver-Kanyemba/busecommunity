@@ -1,9 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>stories</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true">
 
-<ion-content>
-
+  <ion-list>
+  
+  <ion-item #dada id="itemhovered"  *ngFor="let item of items " >
+    <ion-label>
+      <img id="story_main_img" style="height: 320px; width: 320px;" 
+      src="https://static.wixstatic.com/media/e8586c_d9bec1bf928644e1a22c318c5e6c9d39~mv2.jpeg/v1/fill/w_615,h_632,al_c,q_85/e8586c_d9bec1bf928644e1a22c318c5e6c9d39~mv2.webp"
+      alt="">
+      <h1>Title</h1>
+      <p>Subtitle</p> 
+        <p color="primary">@user</p>
+    </ion-label>     
+  </ion-item>  
+  </ion-list>
 </ion-content>
+
+ TODO: insert home tab and contact
