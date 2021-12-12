@@ -1,18 +1,38 @@
 <ion-content [fullscreen]="true">
-
   <ion-list>
-  
-  <ion-item #dada id="itemhovered"  *ngFor="let item of items " >
+
+  <ion-item 
+    #dada 
+    id="itemhovered" 
+    tab="stories-preview"  
+    *ngFor="let item of items"
+    (click)="hi2(dada)"
+    tab="about"
+    >
     <ion-label>
+      <p align="center">    
+      <ion-segment-button tab="home">
       <img id="story_main_img" style="height: 320px; width: 320px;" 
       src="https://static.wixstatic.com/media/e8586c_d9bec1bf928644e1a22c318c5e6c9d39~mv2.jpeg/v1/fill/w_615,h_632,al_c,q_85/e8586c_d9bec1bf928644e1a22c318c5e6c9d39~mv2.webp"
       alt="">
+    </ion-segment-button>
+    <ion-segment-button tab="home">
+    
       <h1>Title</h1>
       <p>Subtitle</p> 
-        <p color="primary">@user</p>
+    </ion-segment-button>
+
+    <ion-segment-button tab="home">
+        <p color="primary">@user</p>    
+    </ion-segment-button>
+  </p>
     </ion-label>     
-  </ion-item>  
+
+
+   </ion-item>  
+
   </ion-list>
+
 </ion-content>
 
- TODO: insert home tab and contact
+ TODO: navigate item to stories preview
