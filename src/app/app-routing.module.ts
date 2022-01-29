@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'busecommunitylogo',
     loadChildren: () => import('./busecommunitylogo/busecommunitylogo.module').then( m => m.BusecommunitylogoPageModule)
   },
+  {
+    path: '**',
+    loadChildren: () => import('./page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
+  },
 ];
 
 @NgModule({
