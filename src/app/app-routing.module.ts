@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'houses',
     loadChildren: () => import('./houses/houses.module').then( m => m.HousesPageModule)
   },
+  {
+    path: 'menuforcommunity',
+    loadChildren: () => import('./menuforcommunity/menuforcommunity.module').then( m => m.MenuforcommunityPageModule)
+  },
 ];
 
 @NgModule({

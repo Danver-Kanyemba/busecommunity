@@ -1,6 +1,6 @@
 import { HousesListService } from './../houses-list.service';
 import { Component, OnInit } from '@angular/core';
-
+import { ToastController } from "@ionic/angular";
 @Component({
   selector: 'app-houses',
   templateUrl: './houses.page.html',
@@ -21,7 +21,8 @@ export class HousesPage implements OnInit {
   clustersMax = 3;
 
   constructor(
-    private housesList: HousesListService
+    private housesList: HousesListService,
+    private toastController: ToastController
     ) { }
 
   ngOnInit() {
@@ -32,27 +33,43 @@ export class HousesPage implements OnInit {
     this.clustersAndTownCenter = this.housesList.clustersAndTownCenter;
   }
 
+  async noMoreHouses(){
+    const toast = await this.toastController.create({
+      message: 'no more houses list completed',
+      position: 'bottom',
+      duration: 3000,
+      buttons: [
+        {
+        side: 'end',
+        icon: 'close',
+        role: 'cancel'
+        }
+      ]
+    });
+    toast.present();
+  }
+
   showMorelight(){
     if (this.lightMax<this.lightIndustry.length) {
       this.lightMax+=3;
     } else {
-      console.log('completed');
-
+      this.noMoreHouses();
+      
     }
   }
   showMoreShashiView(){
     if (this.shashiMax < this.shashiView.length) {
       this.shashiMax+=3;
     } else {
-      console.log('completed');
-
+      this.noMoreHouses();
+      
     }
   }
   showMoreChiwaridzo(){
     if (this.chiwaridzoMax < this.chiwaridzo.length) {
       this.chiwaridzoMax+=3;
     } else {
-      console.log('completed');
+      this.noMoreHouses();
 
     }
   }
@@ -60,7 +77,7 @@ export class HousesPage implements OnInit {
     if (this.aerodromeMax < this.aerodrome.length) {
       this.aerodromeMax+=3;
     } else {
-      console.log('completed');
+      this.noMoreHouses();
 
     }
   }
@@ -68,7 +85,7 @@ export class HousesPage implements OnInit {
     if (this.clustersMax < this.clustersAndTownCenter.length) {
       this.clustersMax+=3;
     } else {
-      console.log('completed');
+      this.noMoreHouses();
 
     }
   }

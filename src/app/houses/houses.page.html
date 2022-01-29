@@ -5,8 +5,30 @@
 </ion-header>
 
 <ion-content>
+  <ion-button href="lightIndustry" expand="block" fill="outline" shape="round">
+    Click me
+  </ion-button>
+  <ion-chip color="primary" mode="ios" outline="true" 
+  >
+    <ion-label href="#lightIndustry">LIGHT INDUSTRY</ion-label>
+  </ion-chip>
+
+
+  <ion-chip color="primary" mode="ios" outline="true">
+    <ion-label>SHASHI VIEW</ion-label>
+  </ion-chip>
+  
+  <ion-chip color="primary" mode="ios" outline="true">
+    <ion-label>Chiwaridzo</ion-label>
+  </ion-chip>
+  <ion-chip color="primary" mode="ios" outline="true">
+    <ion-label>Aerodrome</ion-label>
+  </ion-chip>
+  <ion-chip color="primary" mode="ios" outline="true">
+    <ion-label>Clusters and Town Centre</ion-label>
+  </ion-chip>
   <ion-list>
-    <ion-list-header>
+    <ion-list-header id="lightIndustry">
       LIGHT INDUSTRY
     </ion-list-header>
     <ion-item-group>
@@ -329,7 +351,7 @@
 
     </ion-item-group>
     <div style="text-align:center;" >
-      
+
       <ion-button (click)="showMoreClustersAndTownCenter()" >
         <ion-icon slot="start" name="add"></ion-icon>
         Show more Clusters and Town Centre
