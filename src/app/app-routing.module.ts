@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'stories-preview',
     loadChildren: () => import('./stories-preview/stories-preview.module').then( m => m.StoriesPreviewPageModule)
   },
+  {
+    path: 'houses',
+    loadChildren: () => import('./houses/houses.module').then( m => m.HousesPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,338 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registered houses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      LIGHT INDUSTRY
+    </ion-list-header>
+    <ion-item-group>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item *ngFor="let item of lightIndustry.slice(0, lightMax),  index as i" >
+              
+
+                <ion-grid fixed>
+                  <ion-row>
+                    <ion-col size="12">
+                        <ion-text  color="primary" style="height: auto;" >
+                          <h1 style="height: auto;">
+                            <ion-icon name="locate"></ion-icon>                
+                            {{item.location}}   
+                      </h1> 
+                      </ion-text>
+                    </ion-col>
+                    <ion-col size="12">
+                      <ion-label color="primary">                  
+                          <p>
+
+                            <ion-icon name="person"></ion-icon>
+                        <b>
+                          {{item.nameOfOwner}}
+                        </b>
+                          </p>
+                        <p>
+                          <ion-icon name="call"></ion-icon>
+                            {{item.contact}}
+                        </p>
+                        <p>
+                          <ion-icon name="people"></ion-icon>
+                          {{item.noOfPeople}}
+                        
+                        </p>
+                        <p>
+                          Sex:
+                          {{item.sex}}
+                        </p>
+                        <p>
+                          Charge
+                          {{item.charge}}
+                        </p>
+                      </ion-label>          
+                                      
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+            </ion-item>            
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item-group>
+    <div style="text-align:center;" >
+
+      <ion-button (click)="showMorelight()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        <span>
+          Show more Light Industry 
+        </span>
+      </ion-button>
+    </div>
+  </ion-list>      
+
+  <ion-list>
+    <ion-list-header>
+      SHASHI VIEW
+    </ion-list-header>
+    <ion-item-group>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="12">
+      <ion-item *ngFor="let item of shashiView.slice(0, shashiMax),  index as i" >
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="12">
+                <ion-text  color="primary" style="height: auto;" >
+                  <h1 style="height: auto;">
+                    <ion-icon name="locate"></ion-icon>                
+                    {{item.location}}   
+              </h1> 
+              </ion-text>
+            </ion-col>
+            <ion-col size="12">
+              <ion-label color="primary">                  
+                  <p>
+
+                    <ion-icon name="person"></ion-icon>
+                <b>
+                  {{item.nameOfOwner}}
+                </b>
+                  </p>
+                <p>
+                  <ion-icon name="call"></ion-icon>
+                    {{item.contact}}
+                </p>
+                <p>
+                  <ion-icon name="people"></ion-icon>
+                  {{item.noOfPeople}}
+                
+                </p>
+                <p>
+                  Sex:
+                  {{item.sex}}
+                </p>
+                <p>
+                  Charge
+                  {{item.charge}}
+                </p>
+              </ion-label>          
+                              
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>            
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item-group>
+    <div style="text-align:center;" >
+
+      <ion-button (click)="showMoreShashiView()" >
+        <ion-icon slot="start" name="add"></ion-icon>
+        Show more Shashi View
+      </ion-button>
+    </div>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-list-header>
+      Chiwaridzo
+    </ion-list-header>
+    <ion-item-group>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item *ngFor="let item of chiwaridzo.slice(0, chiwaridzoMax),  index as i" >
+              <ion-grid fixed>
+                <ion-row>
+                  <ion-col size="12">
+                      <ion-text  color="primary" style="height: auto;" >
+                        <h1 style="height: auto;">
+                          <ion-icon name="locate"></ion-icon>                
+                          {{item.location}}   
+                    </h1> 
+                    </ion-text>
+                  </ion-col>
+                  <ion-col size="12">
+                    <ion-label color="primary">                  
+                        <p>
+
+                          <ion-icon name="person"></ion-icon>
+                      <b>
+                        {{item.nameOfOwner}}
+                      </b>
+                        </p>
+                      <p>
+                        <ion-icon name="call"></ion-icon>
+                          {{item.contact}}
+                      </p>
+                      <p>
+                        <ion-icon name="people"></ion-icon>
+                        {{item.noOfPeople}}
+                      
+                      </p>
+                      <p>
+                        Sex:
+                        {{item.sex}}
+                      </p>
+                      <p>
+                        Charge
+                        {{item.charge}}
+                      </p>
+                    </ion-label>          
+                                    
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>            
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item-group>
+    <div style="text-align:center;" >
+
+      <ion-button (click)="showMoreChiwaridzo()" >
+        <ion-icon slot="start" name="add"></ion-icon>
+        Show more Chiwaridzo
+      </ion-button>
+    </div>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-list-header>
+      Aerodrome
+    </ion-list-header>
+    <ion-item-group>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item *ngFor="let item of aerodrome.slice(0, aerodromeMax),  index as i" >
+              <ion-grid fixed>
+                <ion-row>
+                  <ion-col size="12">
+                      <ion-text  color="primary" style="height: auto;" >
+                        <h1 style="height: auto;">
+                          <ion-icon name="locate"></ion-icon>                
+                          {{item.location}}   
+                    </h1> 
+                    </ion-text>
+                  </ion-col>
+                  <ion-col size="12">
+                    <ion-label color="primary">                  
+                        <p>
+
+                          <ion-icon name="person"></ion-icon>
+                      <b>
+                        {{item.nameOfOwner}}
+                      </b>
+                        </p>
+                      <p>
+                        <ion-icon name="call"></ion-icon>
+                          {{item.contact}}
+                      </p>
+                      <p>
+                        <ion-icon name="people"></ion-icon>
+                        {{item.noOfPeople}}
+                      
+                      </p>
+                      <p>
+                        Sex:
+                        {{item.sex}}
+                      </p>
+                      <p>
+                        Charge
+                        {{item.charge}}
+                      </p>
+                    </ion-label>          
+                                    
+                  </ion-col>
+                </ion-row>
+              </ion-grid>              
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item-group>
+    <div style="text-align:center;" >
+
+      <ion-button (click)="showMoreAerodrome()" >
+        <ion-icon slot="start" name="add"></ion-icon>
+        Show more Aerodrome
+      </ion-button>
+    </div>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-list-header>
+      Clusters and Town Centre
+    </ion-list-header>
+    <ion-item-group>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="12">
+      <ion-item *ngFor="let item of clustersAndTownCenter.slice(0, clustersMax),  index as i" >
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="12">
+                <ion-text  color="primary" style="height: auto;" >
+                  <h1 style="height: auto;">
+                    <ion-icon name="locate"></ion-icon>                
+                    {{item.location}}   
+              </h1> 
+              </ion-text>
+            </ion-col>
+            <ion-col size="12">
+              <ion-label color="primary">                  
+                  <p>
+
+                    <ion-icon name="person"></ion-icon>
+                <b>
+                  {{item.nameOfOwner}}
+                </b>
+                  </p>
+                <p>
+                  <ion-icon name="call"></ion-icon>
+                    {{item.contact}}
+                </p>
+                <p>
+                  <ion-icon name="people"></ion-icon>
+                  {{item.noOfPeople}}
+                
+                </p>
+                <p>
+                  Sex:
+                  {{item.sex}}
+                </p>
+                <p>
+                  Charge
+                  {{item.charge}}
+                </p>
+              </ion-label>          
+                              
+            </ion-col>
+          </ion-row>
+        </ion-grid>        
+      </ion-item>            
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item-group>
+    <div style="text-align:center;" >
+      
+      <ion-button (click)="showMoreClustersAndTownCenter()" >
+        <ion-icon slot="start" name="add"></ion-icon>
+        Show more Clusters and Town Centre
+      </ion-button>
+    </div>
+  </ion-list>

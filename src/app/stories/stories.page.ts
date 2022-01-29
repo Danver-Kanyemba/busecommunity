@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-stories',
@@ -9,7 +10,7 @@ export class StoriesPage implements OnInit {
   items: any = ['e',2,2,2,2];
 
 
-  constructor() { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {
   }
@@ -26,5 +27,9 @@ export class StoriesPage implements OnInit {
       fugazy
     );
 
+  }
+
+  openMenu(){
+    this.menu.open('menu');
   }
 }

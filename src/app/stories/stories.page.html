@@ -1,4 +1,17 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
+  
+  <ion-menu contentId="menu-content" menuId="menu" side="start" type="overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Awesome avocado menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      Awesome avocado content
+    </ion-content>
+  </ion-menu>
+
+
   <ion-list>
 
   <ion-item 
@@ -9,23 +22,19 @@
     (click)="hi2(dada)"
     tab="about"
     >
-    <ion-label>
-      <p align="center">    
-      <ion-segment-button tab="home">
-      <img id="story_main_img" style="height: 320px; width: 320px;" 
+    <ion-label (click)="openMenu();">
+      <div align="center">    
+      <ion-segment-button tab="home" >
+      <ion-img id="story_main_img" style="height: 100%; width: 100%;" 
       src="https://static.wixstatic.com/media/e8586c_d9bec1bf928644e1a22c318c5e6c9d39~mv2.jpeg/v1/fill/w_615,h_632,al_c,q_85/e8586c_d9bec1bf928644e1a22c318c5e6c9d39~mv2.webp"
-      alt="">
-    </ion-segment-button>
-    <ion-segment-button tab="home">
+      alt=""></ion-img>
+      </ion-segment-button>
     
       <h1>Title</h1>
       <p>Subtitle</p> 
-    </ion-segment-button>
 
-    <ion-segment-button tab="home">
-        <p color="primary">@user</p>    
-    </ion-segment-button>
-  </p>
+      <p color="primary">@user</p>    
+   </div>
     </ion-label>     
 
 
