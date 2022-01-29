@@ -4,32 +4,44 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button href="lightIndustry" expand="block" fill="outline" shape="round">
-    Click me
-  </ion-button>
-  <ion-chip color="primary" mode="ios" outline="true" 
-  >
-    <ion-label href="#lightIndustry">LIGHT INDUSTRY</ion-label>
-  </ion-chip>
+<ion-content>  
+  <a href="houses#LightIndustry">
+    <ion-chip color="primary" mode="ios" outline="true">
+      <ion-label>Light Industry</ion-label>
+    </ion-chip>
+  </a>
 
 
+  <a href="houses#Shashi" >
   <ion-chip color="primary" mode="ios" outline="true">
-    <ion-label>SHASHI VIEW</ion-label>
+    <ion-label>Shashi View</ion-label>
   </ion-chip>
-  
-  <ion-chip color="primary" mode="ios" outline="true">
-    <ion-label>Chiwaridzo</ion-label>
-  </ion-chip>
-  <ion-chip color="primary" mode="ios" outline="true">
-    <ion-label>Aerodrome</ion-label>
-  </ion-chip>
-  <ion-chip color="primary" mode="ios" outline="true">
-    <ion-label>Clusters and Town Centre</ion-label>
-  </ion-chip>
+  </a>
+
+  <a href="houses#Chiwaridzo">
+    <ion-chip color="primary" mode="ios" outline="true">
+      <ion-label>Chiwaridzo</ion-label>
+    </ion-chip>
+  </a>
+
+  <a href="houses#Aerodrome">
+    <ion-chip color="primary" mode="ios" outline="true">
+      <ion-label>Aerodrome</ion-label>
+    </ion-chip>
+  </a>
+
+  <a href="houses#Clusters">
+    <ion-chip color="primary" mode="ios" outline="true">
+      <ion-label>Clusters and Town Centre</ion-label>
+    </ion-chip>
+  </a>
+
+
   <ion-list>
-    <ion-list-header id="lightIndustry">
-      LIGHT INDUSTRY
+    <ion-list-header id="LightIndustry">
+      <h1>
+        Light Industry
+      </h1>
     </ion-list-header>
     <ion-item-group>
       <ion-grid fixed>
@@ -98,7 +110,9 @@
 
   <ion-list>
     <ion-list-header>
-      SHASHI VIEW
+      <h1 id="Shashi">
+        Shashi View
+      </h1>
     </ion-list-header>
     <ion-item-group>
       <ion-grid fixed>
@@ -128,7 +142,7 @@
                   <ion-icon name="call"></ion-icon>
                     {{item.contact}}
                 </p>
-                <p>
+                <p >
                   <ion-icon name="people"></ion-icon>
                   {{item.noOfPeople}}
                 
@@ -164,7 +178,9 @@
 
   <ion-list>
     <ion-list-header>
-      Chiwaridzo
+      <h1 id="Chiwaridzo">
+        Chiwaridzo
+      </h1>
     </ion-list-header>
     <ion-item-group>
       <ion-grid fixed>
@@ -230,7 +246,9 @@
 
   <ion-list>
     <ion-list-header>
-      Aerodrome
+      <h1 id="Aerodrome">
+        Aerodrome
+      </h1>
     </ion-list-header>
     <ion-item-group>
       <ion-grid fixed>
@@ -296,7 +314,9 @@
 
   <ion-list>
     <ion-list-header>
-      Clusters and Town Centre
+      <h1 id="Clusters">
+        Clusters and Town Centre
+      </h1>
     </ion-list-header>
     <ion-item-group>
       <ion-grid fixed>
@@ -358,3 +378,5 @@
       </ion-button>
     </div>
   </ion-list>
+
+  </ion-content>

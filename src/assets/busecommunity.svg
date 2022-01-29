@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="busecommunity.svg"
+   inkscape:export-filename="/home/danverk/Documents/PROJECTS AFTER ATTACHMENT/templates/google3template/src/assets/busecommunity.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.1.1 (50ffc5b540, 2022-01-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview829"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="2.5650675"
+     inkscape:cx="76.996023"
+     inkscape:cy="55.164239"
+     inkscape:window-width="1366"
+     inkscape:window-height="694"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs824">
+    <rect
+       x="161.24815"
+       y="176.3568"
+       width="42.333256"
+       height="52.31953"
+       id="rect2952" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#3880ff;fill-opacity:1;stroke:none;stroke-width:2.2;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path16462"
+       cx="50"
+       cy="51.741829"
+       r="45.182816" />
+    <text
+       xml:space="preserve"
+       id="text2950"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2952);fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+       transform="translate(-125.58805,-151.42949)"><tspan
+         x="161.24805"
+         y="211.74805"
+         id="tspan36158"><tspan
+           style="font-style:italic;font-weight:500;font-family:Z003;-inkscape-font-specification:'Z003 Medium Italic'"
+           id="tspan36156">B</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:7.55906;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 23.475392,80.77088 52.10918,-22.51963 -24.09308,20.3582"
+       id="path16577" />
+  </g>
+</svg>

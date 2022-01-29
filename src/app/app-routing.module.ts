@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'menuforcommunity',
     loadChildren: () => import('./menuforcommunity/menuforcommunity.module').then( m => m.MenuforcommunityPageModule)
   },
+  {
+    path: 'busecommunitylogo',
+    loadChildren: () => import('./busecommunitylogo/busecommunitylogo.module').then( m => m.BusecommunitylogoPageModule)
+  },
 ];
 
 @NgModule({

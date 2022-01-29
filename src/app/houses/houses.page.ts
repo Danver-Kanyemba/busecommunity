@@ -1,6 +1,6 @@
 import { HousesListService } from './../houses-list.service';
 import { Component, OnInit } from '@angular/core';
-import { ToastController } from "@ionic/angular";
+import { ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-houses',
   templateUrl: './houses.page.html',
@@ -54,7 +54,7 @@ export class HousesPage implements OnInit {
       this.lightMax+=3;
     } else {
       this.noMoreHouses();
-      
+
     }
   }
   showMoreShashiView(){
@@ -62,7 +62,7 @@ export class HousesPage implements OnInit {
       this.shashiMax+=3;
     } else {
       this.noMoreHouses();
-      
+
     }
   }
   showMoreChiwaridzo(){

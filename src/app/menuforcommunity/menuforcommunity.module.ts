@@ -1,3 +1,4 @@
+import { AboutPage } from './../about/about.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,9 @@ import { MenuforcommunityPage } from './menuforcommunity.page';
     IonicModule,
     MenuforcommunityPageRoutingModule
   ],
-  declarations: [MenuforcommunityPage]
+  declarations: [
+    MenuforcommunityPage,
+    AboutPage
+  ]
 })
 export class MenuforcommunityPageModule {}
