@@ -8,6 +8,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class StoriesPage implements OnInit {
   items: any = ['e',2,2,2,2];
+  isThumbsUpVisible= 1;
 
 
   constructor(private menu: MenuController) { }
@@ -29,7 +30,16 @@ export class StoriesPage implements OnInit {
 
   }
 
-  openMenu(){
-    this.menu.open('menu');
-  }
+  onClick(voted: number){
+    this.isThumbsUpVisible = 0;
+
+    if (voted === 1) {
+      console.log('voted for Danver');
+    }
+
+    if(voted===2) {
+      console.log('voted for Danver');
+    }
+}
+
 }

@@ -89,4 +89,9 @@ export class HousesPage implements OnInit {
 
     }
   }
+  contactHouse(contact){
+    window.open(
+      'https://wa.me/+263'+contact
+    );
+  }
 }
