@@ -1,0 +1,23 @@
+<ion-slides mode="md" pager="md" scrollbar="md">
+  <ion-slide class="ion-text-start card-background-page">
+
+  <ion-card 
+  *ngFor="let item of groupsCollection" 
+  class="ion-text-left" 
+  [routerLink]="item.link"
+  style="
+    background-color: #244fae;
+    height: 100px;
+    width: 200px;
+    " >
+
+    <ion-card-header>
+      
+      
+      <ion-card-title>{{item.name}}</ion-card-title>
+    </ion-card-header>
+
+  </ion-card>   
+  </ion-slide>
+
+</ion-slides>
