@@ -1,0 +1,108 @@
+  
+
+<ion-item>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="2">
+        <ion-row class="ion-text-center">
+          <ion-avatar style="height: 50px; width: 50px;" >
+              <img src="./assets/bitmap.png" />
+            </ion-avatar>
+
+              <!-- <img  style="width: 50px; height:50px; border-radius:20px" src="./assets/bitmap.png" /> -->
+              
+           
+            <!-- <div class="timeline"  style="width: 5px; height: 100px; background-color: grey;" ></div> -->
+            
+          </ion-row>
+        <ion-row>
+            <div style="width: 5px; height: 100%; background-color: grey;" ></div>
+        </ion-row>
+      </ion-col>
+
+      <ion-col size="10">
+        <ion-label>
+          <span>
+            <b>
+              Name goes here
+            </b>
+          </span>
+      
+          <br>
+          dsscs 
+          <br>
+          <br>
+              <ion-text color="dark">
+                <p>
+                  Awesome text
+                </p> 
+              </ion-text>
+              <div>
+
+                <img style="border-radius: 10%;" src="./assets/bitmap.png" />
+              </div>
+
+
+            <ion-button 
+                    fill="clear"
+                    (click)="onClick(1)" 
+                    *ngIf="isThumbsUpVisible" >
+                    <ion-icon slot="start" name="thumbs-up" ></ion-icon>
+                    Upvote  
+                  </ion-button> 
+                  <span style="color: rgb(75, 75, 75);">
+                   0
+                  </span>  
+                  
+    
+      
+        </ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-item>
+
+
+
+  <!-- <ion-menu contentId="menu-content" menuId="menu" side="start" type="overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Awesome avocado menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      Awesome avocado content
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-list>
+
+  <ion-item 
+    #dada 
+    id="itemhovered" 
+    tab="stories-preview"  
+    *ngFor="let item of items"
+    (click)="hi2(dada)"
+    tab="about"
+    >
+    <ion-label (click)="openMenu();">
+      <div align="center">    
+      <ion-segment-button tab="home" >
+      <ion-img id="story_main_img" style="height: 100%; width: 100%;" 
+      src="https://static.wixstatic.com/media/e8586c_d9bec1bf928644e1a22c318c5e6c9d39~mv2.jpeg/v1/fill/w_615,h_632,al_c,q_85/e8586c_d9bec1bf928644e1a22c318c5e6c9d39~mv2.webp"
+      alt=""></ion-img>
+      </ion-segment-button>
+    
+      <h1>Title</h1>
+      <p>Subtitle</p> 
+
+      <p color="primary">@user</p>    
+   </div>
+    </ion-label>     
+
+
+   </ion-item>  
+
+  </ion-list> -->

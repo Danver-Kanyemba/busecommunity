@@ -17,3 +17,11 @@
 //   //     color: white;
 //   //   }
 // }
+ion-img {
+  //   border: blue solid 1px;
+}
+
+ion-img.md.hydrated #shadow-root img {
+  border: blue solid 1px;
+  border-radius: 20px;
+}
