@@ -1,20 +1,25 @@
-<ion-slides mode="md" pager="md" scrollbar="md">
-  <ion-slide class="ion-text-start card-background-page">
+<ion-slides mode="ios" pager="true" scrollbar="ios" [options]="slideOpts" >
+  <ion-slide class=" card-background-page">
 
   <ion-card 
   *ngFor="let item of groupsCollection" 
-  class="ion-text-left" 
+  class="ion-no-padding"
+
   [routerLink]="item.link"
   style="
     background-color: #244fae;
-    height: 100px;
+    height: 77px;
     width: 200px;
     " >
 
     <ion-card-header>
       
       
-      <ion-card-title>{{item.name}}</ion-card-title>
+      <ion-card-title >
+        {{item.name}}
+        <ion-icon name="eye-off" *ngIf="item.isLocked === 1" ></ion-icon>
+        <ion-icon name="eye" *ngIf="item.isLocked === 0" ></ion-icon>
+      </ion-card-title>
     </ion-card-header>
 
   </ion-card>   

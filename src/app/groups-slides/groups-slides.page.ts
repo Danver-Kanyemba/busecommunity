@@ -10,15 +10,18 @@ export class GroupsSlidesPage implements OnInit {
   groupsCollection=[
       {
         name: 'Houses',
-        link: 'houses'
+        link: 'houses',
+        isLocked: 0
       },
       {
         name: 'Ent',
-        link: ''
+        link: '',
+        isLocked: 1
       },
       {
         name: 'SRC',
-        link: ''
+        link: '',
+        isLocked: 1
       }
   ];
 
