@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FabMenuClickPageRoutingModule } from './fab-menu-click-routing.module';
+import { UserTopToolbarPageRoutingModule } from './user-top-toolbar-routing.module';
 
-import { FabMenuClickPage } from './fab-menu-click.page';
+import { UserTopToolbarPage } from './user-top-toolbar.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FabMenuClickPageRoutingModule
+    UserTopToolbarPageRoutingModule
   ],
   declarations: []
 })
-export class FabMenuClickPageModule {}
+export class UserTopToolbarPageModule {}

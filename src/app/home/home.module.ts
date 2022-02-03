@@ -1,4 +1,4 @@
-import { FabMenuClickPage } from './../fab-menu-click/fab-menu-click.page';
+import { UserTopToolbarPage } from './../user-top-toolbar/user-top-toolbar.page';
 import { StoriesPage } from './../stories/stories.page';
 import { GroupsSlidesPage } from './../groups-slides/groups-slides.page';
 import { NgModule } from '@angular/core';
@@ -8,7 +8,6 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
 
 @NgModule({
   imports: [
@@ -22,7 +21,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     HomePage,
     GroupsSlidesPage,
     StoriesPage,
-    FabMenuClickPage
+    UserTopToolbarPage
   ]
 })
 export class HomePageModule {}

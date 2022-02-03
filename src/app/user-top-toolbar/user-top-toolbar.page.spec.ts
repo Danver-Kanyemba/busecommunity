@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { FabMenuClickPage } from './fab-menu-click.page';
+import { UserTopToolbarPage } from './user-top-toolbar.page';
 
-describe('FabMenuClickPage', () => {
-  let component: FabMenuClickPage;
-  let fixture: ComponentFixture<FabMenuClickPage>;
+describe('UserTopToolbarPage', () => {
+  let component: UserTopToolbarPage;
+  let fixture: ComponentFixture<UserTopToolbarPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ FabMenuClickPage ],
+      declarations: [ UserTopToolbarPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(FabMenuClickPage);
+    fixture = TestBed.createComponent(UserTopToolbarPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

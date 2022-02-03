@@ -39,30 +39,16 @@ const routes: Routes = [
     path: 'menuforcommunity',
     loadChildren: () => import('./menuforcommunity/menuforcommunity.module').then( m => m.MenuforcommunityPageModule)
   },
-  {
-    path: 'busecommunitylogo',
-    loadChildren: () => import('./busecommunitylogo/busecommunitylogo.module').then( m => m.BusecommunitylogoPageModule)
-  },
-  // {
-  //   path: 'menuforcommunity/sign-in',
-  //   loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
-  // },
+
   {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
   },
   {
-    path: 'groups-slides',
-    loadChildren: () => import('./groups-slides/groups-slides.module').then( m => m.GroupsSlidesPageModule)
+    path: 'user-top-toolbar',
+    loadChildren: () => import('./user-top-toolbar/user-top-toolbar.module').then( m => m.UserTopToolbarPageModule)
   },
-  {
-    path: 'post-on-main',
-    loadChildren: () => import('./post-on-main/post-on-main.module').then( m => m.PostOnMainPageModule)
-  },
-  {
-    path: 'fab-menu-click',
-    loadChildren: () => import('./fab-menu-click/fab-menu-click.module').then( m => m.FabMenuClickPageModule)
-  },
+
 ];
 
 @NgModule({
