@@ -7,15 +7,22 @@
         </ion-menu>
         <ion-router-outlet id="piz"></ion-router-outlet>
 
+        <ion-menu color="dark" contentId="imagePost" menuId="imagePost" side="start" type="overlay">
+
+                <ion-content>
+                        <img src="urlForPostImage" alt="">
+                        TODO:: LINK MENU TO POST AND SORT BACKGROUNF IMG
+                </ion-content>
+    </ion-menu>
+        
         <ion-tabs>
                 <ion-tab-bar slot="bottom" color="dark">
                         <ion-tab-button tab="home">
-                                <ion-img style="width: 50px; height: 50px;" src="./assets/busecommunity.svg"></ion-img>
+                                <ion-icon name="home"></ion-icon>
                         </ion-tab-button>
 
                         <ion-tab-button tab="search">
                                 <ion-icon name="search"></ion-icon>
-                                <ion-label>Search</ion-label>
                         </ion-tab-button>
 
         

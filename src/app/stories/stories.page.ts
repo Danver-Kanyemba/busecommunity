@@ -1,3 +1,4 @@
+import { PostImageMaximizeService } from './../post-image-maximize.service';
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
@@ -11,7 +12,10 @@ export class StoriesPage implements OnInit {
   isThumbsUpVisible= 1;
 
 
-  constructor(private menu: MenuController) { }
+  constructor(
+    private menu: MenuController,
+    private postImageMaximizeService: PostImageMaximizeService
+    ) { }
 
   ngOnInit() {
   }
@@ -28,6 +32,11 @@ export class StoriesPage implements OnInit {
       fugazy
     );
 
+  }
+
+  linkPicture(input){
+    console.log(input.el.style.backgroundImage);
+    this.postImageMaximizeService.urlForImg(input.el.style.backgroundImage);
   }
 
   onClick(voted: number){

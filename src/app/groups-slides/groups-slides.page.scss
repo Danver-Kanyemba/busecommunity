@@ -2,13 +2,16 @@
   ion-card {
     position: relative;
     text-align: left;
+    background-color: #244fae;
+    height: 77px;
+    width: 200px;
   }
+
   ion-card-title {
     position: absolute;
-    top: 46px;
+    top: 30px;
     left: 0px;
     width: 100px;
-    font-weight: bold;
     font-size: 1em;
     color: white;
   }
