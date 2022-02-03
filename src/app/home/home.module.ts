@@ -1,3 +1,4 @@
+import { FabMenuClickPage } from './../fab-menu-click/fab-menu-click.page';
 import { StoriesPage } from './../stories/stories.page';
 import { GroupsSlidesPage } from './../groups-slides/groups-slides.page';
 import { NgModule } from '@angular/core';
@@ -20,7 +21,8 @@ import { HomePageRoutingModule } from './home-routing.module';
   declarations: [
     HomePage,
     GroupsSlidesPage,
-    StoriesPage
+    StoriesPage,
+    FabMenuClickPage
   ]
 })
 export class HomePageModule {}

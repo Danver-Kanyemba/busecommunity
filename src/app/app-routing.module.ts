@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'busecommunitylogo',
     loadChildren: () => import('./busecommunitylogo/busecommunitylogo.module').then( m => m.BusecommunitylogoPageModule)
   },
+  // {
+  //   path: 'menuforcommunity/sign-in',
+  //   loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
+  // },
   {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
@@ -50,6 +54,14 @@ const routes: Routes = [
   {
     path: 'groups-slides',
     loadChildren: () => import('./groups-slides/groups-slides.module').then( m => m.GroupsSlidesPageModule)
+  },
+  {
+    path: 'post-on-main',
+    loadChildren: () => import('./post-on-main/post-on-main.module').then( m => m.PostOnMainPageModule)
+  },
+  {
+    path: 'fab-menu-click',
+    loadChildren: () => import('./fab-menu-click/fab-menu-click.module').then( m => m.FabMenuClickPageModule)
   },
 ];
 

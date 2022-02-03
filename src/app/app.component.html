@@ -1,5 +1,12 @@
 <ion-app>
-      
+        <ion-menu color="dark" contentId="piz" menuId="piz" side="start" type="overlay">
+
+                    <ion-content>
+                <app-post-on-main></app-post-on-main>
+                    </ion-content>
+        </ion-menu>
+        <ion-router-outlet id="piz"></ion-router-outlet>
+
         <ion-tabs>
                 <ion-tab-bar slot="bottom" color="dark">
                         <ion-tab-button tab="home">
@@ -14,15 +21,8 @@
         
                         <ion-tab-button tab="menuforcommunity">
                                 <ion-icon name="menu"></ion-icon>
-                                <!-- <ion-icon name="home"></ion-icon> -->
                         </ion-tab-button>
 
-
-<!-- 
-                        <ion-tab-button tab="stories-preview">
-                                <ion-icon name="information-circle"></ion-icon>
-                                <ion-label>Stories preview</ion-label>
-                        </ion-tab-button> -->
                 </ion-tab-bar>
         </ion-tabs>
 </ion-app>

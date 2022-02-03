@@ -8,10 +8,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { PostOnMainPage } from './post-on-main/post-on-main.page';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostOnMainPage
   ],
   entryComponents: [],
   imports: [

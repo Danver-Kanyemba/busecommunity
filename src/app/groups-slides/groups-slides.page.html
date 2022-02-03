@@ -1,10 +1,13 @@
+
+
 <ion-slides mode="ios" pager="true" scrollbar="ios" [options]="slideOpts" >
+
   <ion-slide class=" card-background-page">
 
   <ion-card 
   *ngFor="let item of groupsCollection" 
   class="ion-no-padding"
-
+    draggable="false"
   [routerLink]="item.link"
   style="
     background-color: #244fae;

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { StoriesPageRoutingModule } from './stories-routing.module';
+import { PostOnMainPageRoutingModule } from './post-on-main-routing.module';
 
-import { StoriesPage } from './stories.page';
+import { PostOnMainPage } from './post-on-main.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    StoriesPageRoutingModule
+    PostOnMainPageRoutingModule
   ],
   declarations: []
 })
-export class StoriesPageModule {}
+export class PostOnMainPageModule {}

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { StoriesPageRoutingModule } from './stories-routing.module';
+import { FabMenuClickPageRoutingModule } from './fab-menu-click-routing.module';
 
-import { StoriesPage } from './stories.page';
+import { FabMenuClickPage } from './fab-menu-click.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    StoriesPageRoutingModule
+    FabMenuClickPageRoutingModule
   ],
   declarations: []
 })
-export class StoriesPageModule {}
+export class FabMenuClickPageModule {}
