@@ -48,6 +48,10 @@ const routes: Routes = [
     path: 'user-top-toolbar',
     loadChildren: () => import('./user-top-toolbar/user-top-toolbar.module').then( m => m.UserTopToolbarPageModule)
   },
+  {
+    path: 'post-image-click',
+    loadChildren: () => import('./post-image-click/post-image-click.module').then( m => m.PostImageClickPageModule)
+  },
 
 ];
 

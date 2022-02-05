@@ -1,22 +1,26 @@
+
 <ion-item class="ion-no-margin ion-no-padding">
   <ion-grid>
     <ion-row>
       <ion-col size="2">
-          <ion-row class="ion-text-center">              
-            <ion-avatar
-             style="max-height: 50px; 
+        <ion-row style="height: 100%;" > 
+          <div style="display: block ruby; width: 100%;" class="ion-text-center">
+            
+              <ion-avatar
+              style="max-height: 50px; 
             max-width: 50px; object-fit: cover;
-            height: auto; background-color:#3880ff;
-             color: white;" >
-            <img src="./assets/IMG-20211129-WA0005.jpg" />
+            height: auto;
+            color: white;"
+            (click)="showAvatar(kudu)"
+            >
+            <img #kudu src="./assets/IMG-20211129-WA0005.jpg" />
           </ion-avatar>
-          
-          
-          
-        </ion-row>
-        <ion-row>
-          <div style="width: 5px; height: 100%; background-color: grey;" ></div>
-        </ion-row>
+        </div>   
+        <div style="display: block ruby; width: 100%;" class="ion-text-center">
+        
+        <div style="width: 5px; height: 100px; background-color: grey;" ></div>
+      </div> 
+      </ion-row>
       </ion-col>
       
       <ion-col size="10">
@@ -37,6 +41,7 @@
             kindly note we are currently performing updates 
           </p>
         </ion-text>
+
         <ion-label style="
         border-radius: 20px; 
         width: 100%; 
@@ -47,6 +52,7 @@
         background-repeat: no-repeat;
         "
         #postImage
+
         >
   
   <ion-segment-button 
@@ -58,16 +64,10 @@
     (click)="linkPicture(postImage)"
   >
   
-  <!-- <ion-img 
-    i-segme
-    style="border-radius: 50px;width: 100%; height: 100%; max-height: 220px ; max-width: 400px;" 
-    src="./assets/welcomebusecommunity.png" 
-    >
-    
-  </ion-img> -->
 </ion-segment-button>
 
         </ion-label>
+
       </ion-col>
     </ion-row>
     </ion-grid>
@@ -79,9 +79,12 @@
       <ion-row>
         <ion-col size="2">
           <ion-row class="ion-text-center">
+            <div style="display: block ruby; width: 100%;" class="ion-text-end">
+            
             <ion-avatar>
            <ion-skeleton-text animated></ion-skeleton-text>
-         </ion-avatar>           
+         </ion-avatar>         
+         </div>  
           </ion-row>
         </ion-col>
       

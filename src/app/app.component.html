@@ -1,26 +1,31 @@
 <ion-app>
         <ion-menu color="dark" contentId="piz" menuId="piz" side="start" type="overlay">
-
-                    <ion-content>
-                <app-post-on-main></app-post-on-main>
-                    </ion-content>
+                
+                <ion-content>
+                        <app-post-on-main></app-post-on-main>
+                </ion-content>
         </ion-menu>
         <ion-router-outlet id="piz"></ion-router-outlet>
-
-        <ion-menu color="dark" contentId="imagePost" menuId="imagePost" side="start" type="overlay">
-
+        
+        <ion-menu color="dark" contentId="imagePost" menuId="imagePost" side="end" type="overlay">
+                
                 <ion-content>
-                        <img src="urlForPostImage" alt="">
-                        TODO:: LINK MENU TO POST AND SORT BACKGROUNF IMG
+                       <app-post-image-click></app-post-image-click> 
+                       
                 </ion-content>
-    </ion-menu>
+        </ion-menu>
+        <ion-router-outlet id="imagePost"></ion-router-outlet>
+        
         
         <ion-tabs>
                 <ion-tab-bar slot="bottom" color="dark">
                         <ion-tab-button tab="home">
                                 <ion-icon name="home"></ion-icon>
+                                <ion-text color="primary">
+                                </ion-text>
                         </ion-tab-button>
-
+                        {{urlForPostImage| json}}
+                        
                         <ion-tab-button tab="search">
                                 <ion-icon name="search"></ion-icon>
                         </ion-tab-button>

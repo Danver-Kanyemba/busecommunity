@@ -1,6 +1,6 @@
 import { PostImageMaximizeService } from './../post-image-maximize.service';
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { IonLabel, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-stories',
@@ -8,22 +8,26 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./stories.page.scss'],
 })
 export class StoriesPage implements OnInit {
-  items: any = ['e',2,2,2,2];
   isThumbsUpVisible= 1;
-
+  test1;
 
   constructor(
     private menu: MenuController,
-    private postImageMaximizeService: PostImageMaximizeService
-    ) { }
+    public postImageMaximizeService: PostImageMaximizeService
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    this.test1 = this.postImageMaximizeService.urlForImage;
+    }
 
-  hi(){
+  hi(fdfd: HTMLSelectElement){
     console.log(
       'testok'
     );
+
+    const s = fdfd.value;
+   const g = document.getElementById('dfdf');
+ console.log(g);
 
   }
 
@@ -35,10 +39,23 @@ export class StoriesPage implements OnInit {
   }
 
   linkPicture(input){
+
     console.log(input.el.style.backgroundImage);
-    this.postImageMaximizeService.urlForImg(input.el.style.backgroundImage);
+    const gg = input.el.style.backgroundImage.split('"');
+
+    this.postImageMaximizeService.urlForImage = gg[1];
+    this.menu.toggle('imagePost');
+
   }
 
+  showAvatar(input){
+    console.log(input);
+    const gg = input.src;
+
+    this.postImageMaximizeService.urlForImage = gg;
+    this.menu.toggle('imagePost');
+
+  }
   onClick(voted: number){
     this.isThumbsUpVisible = 0;
 

@@ -1,3 +1,4 @@
+import { PostImageClickPage } from './post-image-click/post-image-click.page';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -13,7 +14,8 @@ import { PostOnMainPage } from './post-on-main/post-on-main.page';
 @NgModule({
   declarations: [
     AppComponent,
-    PostOnMainPage
+    PostOnMainPage,
+    PostImageClickPage
   ],
   entryComponents: [],
   imports: [
