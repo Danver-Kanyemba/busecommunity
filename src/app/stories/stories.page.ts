@@ -1,6 +1,7 @@
 import { PostImageMaximizeService } from './../post-image-maximize.service';
 import { Component, OnInit } from '@angular/core';
 import { IonLabel, MenuController } from '@ionic/angular';
+import { StoriesDataService } from '../stories-data.service';
 
 @Component({
   selector: 'app-stories',
@@ -10,42 +11,24 @@ import { IonLabel, MenuController } from '@ionic/angular';
 export class StoriesPage implements OnInit {
   isThumbsUpVisible= 1;
   test1;
+  stories$;
 
   constructor(
     private menu: MenuController,
-    public postImageMaximizeService: PostImageMaximizeService
+    private postImageMaximizeService: PostImageMaximizeService,
+    private storiesService: StoriesDataService
     ) {}
 
     ngOnInit() {
     this.test1 = this.postImageMaximizeService.urlForImage;
+    this.stories$ = this.storiesService.stories$;
     }
 
-  hi(fdfd: HTMLSelectElement){
-    console.log(
-      'testok'
-    );
-
-    const s = fdfd.value;
-   const g = document.getElementById('dfdf');
- console.log(g);
-
-  }
-
-  hi2(fugazy: any){
-    console.log(
-      fugazy
-    );
-
-  }
-
   linkPicture(input){
-
     console.log(input.el.style.backgroundImage);
     const gg = input.el.style.backgroundImage.split('"');
-
     this.postImageMaximizeService.urlForImage = gg[1];
     this.menu.toggle('imagePost');
-
   }
 
   showAvatar(input){
