@@ -32,10 +32,30 @@
                                 <ion-icon name="menu"></ion-icon>
                         </ion-tab-button>
 
-                        <ion-tab-button (click)="signIn()">
+                        <ion-tab-button
+                         (click)="signIn()" 
+                        *ngIf="(afAuth.authState | async) === null"
+                         
+                         >
                                 <ion-icon name="log-in"></ion-icon>
                                 <ion-label>Sign In</ion-label>
                         </ion-tab-button>
+
+                        <ion-tab-button tab="home"
+                        (click)="openPopOver()"
+                        *ngIf="afAuth.user | async as user"
+                        >
+                                <ion-avatar
+                                style="
+                                width: inherit;
+                                height: 42px;
+                                max-height: 42px;
+                                max-width: 42px;"
+                                >
+                                        <ion-img [src]="user.photoURL"></ion-img>
+                                </ion-avatar>
+                        </ion-tab-button>
+                        
                 </ion-tab-bar>
         </ion-tabs>
 </ion-app>
