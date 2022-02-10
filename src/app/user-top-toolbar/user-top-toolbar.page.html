@@ -1,12 +1,38 @@
-<ion-toolbar color="dark">
-<ion-button class="ion-text-capitalize"  fill="outline" shape="round" color="light">
-  Guest
-  <ion-icon name="apps" class="ion-margin-start"></ion-icon>
-</ion-button>
+<ion-toolbar>
 
 <ion-img 
-  slot="end" 
+  slot="start" 
   style="width: 50px; height: 50px;" 
   src="./assets/busecommunity.svg"></ion-img>
 
+  <ion-text >
+    <p>BUSE <br> community</p>
+  </ion-text>
+
+
+  <ion-button
+  (click)="clickFacebook()"
+  onclick=''
+  slot="end" 
+  size="small" 
+  shape="round" >
+  <ion-icon  name="logo-facebook" ></ion-icon>
+</ion-button>
+
+
+  <ion-button 
+    (click)="clickWhatsapp()"
+    slot="end" 
+    size="small" 
+    shape="round" >
+    <ion-icon  name="logo-whatsapp" ></ion-icon>
+  </ion-button>
+  
+  <ion-button
+    (click)="clickLinkedIn()"
+   slot="end" 
+   size="small" 
+   shape="round" >
+    <ion-icon  name="logo-linkedin" ></ion-icon>
+  </ion-button>  
 </ion-toolbar>

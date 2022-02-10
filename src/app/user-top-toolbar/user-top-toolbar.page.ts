@@ -12,4 +12,13 @@ export class UserTopToolbarPage implements OnInit {
   ngOnInit() {
   }
 
+  clickFacebook(){
+    window.open('https://www.facebook.com/danver.kanyemba/');
+  }
+  clickWhatsapp(){
+    window.open('https://wa.me/+263784017784');
+  }
+  clickLinkedIn(){
+    window.open('https://www.linkedin.com/in/danver-kanyemba/');
+  }
 }

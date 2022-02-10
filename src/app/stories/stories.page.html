@@ -93,14 +93,21 @@
 
 
   <ng-template #loading>
-    <ion-item class="ion-no-margin ion-no-padding"  >
+    <ion-item>
+      
       <ion-grid fixed>
         <ion-row>
           <ion-col size="2">
             <ion-row class="ion-text-center">
             <div style="display: block ruby; width: 100%;" class="ion-text-end">
               
-              <ion-avatar>
+              <ion-avatar 
+                style="
+                width: inherit;
+                height: 42px;
+                max-height: 42px;
+                max-width: 42px;
+                ">
                 <ion-skeleton-text animated></ion-skeleton-text>
               </ion-avatar>         
             </div>  
@@ -137,5 +144,5 @@
         </ion-col>
       </ion-row>
     </ion-grid>    
-  </ion-item> 
-</ng-template>
+  </ion-item>
+    </ng-template>
