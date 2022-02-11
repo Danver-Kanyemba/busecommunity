@@ -1,6 +1,59 @@
 <ion-content>
-  <app-about></app-about>
-  <ion-button routerLink="sign-in"  expand="block" fill="clear" shape="round">
+  <ion-button
+  (click)="signIn()" 
+  *ngIf="(afAuth.authState | async) === null"
+  
+  expand="block" fill="clear" shape="round">
     Sign In
   </ion-button>
+  
+  <div
+  *ngIf="afAuth.user | async as user"
+  >
+
+  <ion-card  
+  class="ion-margin-horizontal ion-margin-vertical ion-text-center ion-padding-horizontal" >
+  <ion-header style="display: inline;">
+    <div
+     style="display: block ruby; width: 100%;" 
+     class="ion-text-center">
+          
+      <ion-avatar
+        style="
+        width: inherit;
+        height: 200px;
+        max-height: 200px;
+        max-width: 200px;"
+        (click)="showAvatar(user.photoURL)"
+        >
+        <ion-img [src]="user.photoURL"></ion-img>
+        </ion-avatar> 
+        </div>
+<br>
+
+
+        <ion-card-title>
+          {{user.displayName}}
+          
+        </ion-card-title>
+
+        <ion-card-subtitle>
+          {{user.email}}
+          
+        </ion-card-subtitle>
+        
+        <ion-text color="secondary">
+          <p>These details can be changed through your email not on this platform</p>
+        </ion-text>
+        <ion-button (click)="signOut()" color="light" expand="block">
+          <ion-icon slot="start" name="log-out"></ion-icon>
+          Sign out
+        </ion-button>
+      </ion-header>
+         
+      </ion-card>
+</div>
+
+<app-about></app-about>
+
 </ion-content>

@@ -38,7 +38,7 @@ async openPopOver(ev){
   const popover = await this.popoverController.create({
     component: PopOverPage,
     event: ev,
-    translucent: true
+    translucent: true,
   });
   return await popover.present();
   }

@@ -27,31 +27,27 @@
                         <ion-tab-button tab="search">
                                 <ion-icon name="search"></ion-icon>
                         </ion-tab-button>
-        
-                        <ion-tab-button tab="menuforcommunity">
-                                <ion-icon name="menu"></ion-icon>
-                        </ion-tab-button>
 
                         <ion-tab-button
-                         (click)="signIn()" 
+                        (click)="signIn()" 
                         *ngIf="(afAuth.authState | async) === null"
-                         
+                        tab="menuforcommunity"
                          >
                                 <ion-icon name="log-in"></ion-icon>
                                 <ion-label>Sign In</ion-label>
                         </ion-tab-button>
 
                         <ion-tab-button tab="home"
-                        (click)="openPopOver()"
-                        *ngIf="afAuth.user | async as user"
+                                *ngIf="afAuth.user | async as user"
+                                tab="menuforcommunity"
                         >
                                 <ion-avatar
-                                style="
-                                width: inherit;
-                                height: 42px;
-                                max-height: 42px;
-                                max-width: 42px;"
-                                >
+                                        style="
+                                        width: inherit;
+                                        height: 42px;
+                                        max-height: 42px;
+                                        max-width: 42px;"
+                                        >
                                         <ion-img [src]="user.photoURL"></ion-img>
                                 </ion-avatar>
                         </ion-tab-button>

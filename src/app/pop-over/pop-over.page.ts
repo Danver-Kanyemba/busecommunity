@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
@@ -16,4 +17,7 @@ export class PopOverPage implements OnInit {
   ngOnInit() {
   }
 
+  signOut(){
+    this.afAuth.signOut();
+  }
 }
