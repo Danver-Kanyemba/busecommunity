@@ -2,6 +2,7 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/datab
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MenuController, ToastController } from '@ionic/angular';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-post-on-main',
@@ -10,13 +11,16 @@ import { MenuController, ToastController } from '@ionic/angular';
 })
 export class PostOnMainPage implements OnInit {
  form;
+ uidForUser;
+ user;
  stories$: AngularFireList<any[]> | undefined;
 
   constructor(
     private menu: MenuController,
     private toastController: ToastController,
     private fb: FormBuilder,
-    private db: AngularFireDatabase
+    private db: AngularFireDatabase,
+    public afAuth: AngularFireAuth,
     ) { }
 
   ngOnInit() {
@@ -25,8 +29,10 @@ export class PostOnMainPage implements OnInit {
     this.form = this.fb.group({
       title: [
         '',
-        [Validators.required],
-      ]
+        [
+          Validators.required
+        ],
+      ],
     });
   }
 
@@ -38,13 +44,23 @@ export class PostOnMainPage implements OnInit {
     this.menu.close('piz');
   }
 
-
+  getUid() {
+    // this.uidForUser = this.afAuth.auth.currentUser.uid
+    }
 
   async guestPost(){
+    this.getUid();
 
-    this.stories$.push(this.form.value).then(()=>{
+    console.log(this.uidForUser);
+    this.afAuth.idToken.subscribe(
+      user=>{
+        this.user = user;
+
+
+
+    this.stories$.push(this.form.value + this.uidForUser).then(()=>{
       console.log('form submited');
-
+})
     });
 
     const toast = await this.toastController.create({

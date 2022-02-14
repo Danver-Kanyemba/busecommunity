@@ -20,7 +20,8 @@ export class UserService {
       displayName:user.displayName,
       photoUrl: user.photoURL
     };
-     this.db.object(`/users/${user.uid}`).set(data);
+
+    this.db.object(`/users/${user.uid}`).set(data);
 
   }
 }

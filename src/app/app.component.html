@@ -1,21 +1,20 @@
 <ion-app>
         <ion-menu contentId="piz" menuId="piz" side="start" type="overlay">
-                
+
                 <ion-content>
                         <app-post-on-main></app-post-on-main>
                 </ion-content>
         </ion-menu>
         <ion-router-outlet id="piz"></ion-router-outlet>
-        
+
         <ion-menu color="dark" contentId="imagePost" menuId="imagePost" side="end" type="overlay">
-                
                 <ion-content>
-                       <app-post-image-click></app-post-image-click> 
-                       
+                       <app-post-image-click></app-post-image-click>
                 </ion-content>
         </ion-menu>
+
         <ion-router-outlet id="imagePost"></ion-router-outlet>
-                
+
         <ion-tabs>
                 <ion-tab-bar slot="bottom">
                         <ion-tab-button tab="home">
@@ -23,13 +22,13 @@
                                 <ion-text color="primary">
                                 </ion-text>
                         </ion-tab-button>
-                        
+
                         <ion-tab-button tab="search">
                                 <ion-icon name="search"></ion-icon>
                         </ion-tab-button>
 
                         <ion-tab-button
-                        (click)="signIn()" 
+                        (click)="signIn()"
                         *ngIf="(afAuth.authState | async) === null"
                         tab="menuforcommunity"
                          >
@@ -51,7 +50,7 @@
                                         <ion-img [src]="user.photoURL"></ion-img>
                                 </ion-avatar>
                         </ion-tab-button>
-                        
+
                 </ion-tab-bar>
         </ion-tabs>
 </ion-app>

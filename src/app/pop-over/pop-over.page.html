@@ -3,7 +3,7 @@
   *ngIf="afAuth.user | async as user"
   s>
     
-    <ion-button (click)="onClick()">
+    <ion-button>
       <ion-icon slot="start" name="add"></ion-icon>
       {{user.displayName}}
     </ion-button>

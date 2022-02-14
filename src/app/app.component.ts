@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
 
     const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
     const credential = await this.afAuth.signInWithPopup(googleAuthProvider);
-    console.log(credential.user);
     await this.userService.updateUserData(credential.user);
   }
 
