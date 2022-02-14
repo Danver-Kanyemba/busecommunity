@@ -2,7 +2,31 @@
 
 <ion-slides mode="ios" pager="true" scrollbar="ios" [options]="slideOpts" >
 
-  
+  <div *ngIf="groupsCollection$ | async; else groupSlidesTotal" >
+
+  <ion-slide class=" card-background-page" >
+
+  <ion-card 
+  *ngFor="let item of groupsCollection$ | async"
+  class="ion-no-padding"
+  draggable="false"
+  [routerLink]="item.link"
+ >
+
+    <ion-card-header>
+      
+      
+      <ion-card-title >
+        {{item.name}}
+        <ion-icon name="eye-off" *ngIf="item.isLocked === 1" ></ion-icon>
+        <ion-icon name="eye" *ngIf="item.isLocked === 0" ></ion-icon>
+      </ion-card-title>
+    </ion-card-header>
+    
+  </ion-card> 
+  </ion-slide>
+</div>
+<ng-template #groupSlidesTotal>
   <ion-slide>
 
       <ion-skeleton-text
@@ -36,26 +60,8 @@
       ></ion-skeleton-text>
     
 </ion-slide>
-<ion-slide class=" card-background-page">
+  
 
-  <ion-card 
-  *ngFor="let item of groupsCollection" 
-  class="ion-no-padding"
-  draggable="false"
-  [routerLink]="item.link"
- >
-
-    <ion-card-header>
-      
-      
-      <ion-card-title >
-        {{item.name}}
-        <ion-icon name="eye-off" *ngIf="item.isLocked === 1" ></ion-icon>
-        <ion-icon name="eye" *ngIf="item.isLocked === 0" ></ion-icon>
-      </ion-card-title>
-    </ion-card-header>
-
-  </ion-card> 
-  </ion-slide>
+</ng-template>
 
 </ion-slides>
