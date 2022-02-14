@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireDatabase, AngularFireObject } from '@angular/fire/compat/database';
 
 @Injectable({
@@ -10,7 +9,6 @@ export class UserService {
 
   constructor(
     private db: AngularFireDatabase,
-    private afAuth: AngularFireAuth
   ) { }
 
   updateUserData(user){
@@ -18,7 +16,8 @@ export class UserService {
       uid: user.uid,
       email: user.email,
       displayName:user.displayName,
-      photoUrl: user.photoURL
+      photoUrl: user.photoURL,
+
     };
 
     this.db.object(`/users/${user.uid}`).set(data);

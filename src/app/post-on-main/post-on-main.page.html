@@ -2,9 +2,12 @@
         [formGroup]="form"
 >
 <ion-toolbar>
-        <ion-button (click)="guestPost()" slot="start" fill="solid" shape="round">
-            Post
-        </ion-button>
+        <div *ngIf="afAuth.user | async as user">
+
+                <ion-button (click)="guestPost(user.uid)" slot="start" fill="solid" shape="round">
+                        Post
+                </ion-button>
+        </div>
         <ion-button (click)="closeMenu()" slot="end" fill="clear" size="small" shape="round">
         <ion-icon slot="icon-only" name="close"></ion-icon>
     </ion-button>

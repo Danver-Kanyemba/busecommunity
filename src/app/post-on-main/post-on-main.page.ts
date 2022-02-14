@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MenuController, ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Token } from '@angular/compiler/src/ml_parser/lexer';
 
 @Component({
   selector: 'app-post-on-main',
@@ -48,20 +49,26 @@ export class PostOnMainPage implements OnInit {
     // this.uidForUser = this.afAuth.auth.currentUser.uid
     }
 
-  async guestPost(){
+  async guestPost(input){
     this.getUid();
 
     console.log(this.uidForUser);
-    this.afAuth.idToken.subscribe(
-      user=>{
-        this.user = user;
+//     this.afAuth.idToken.subscribe(
+//       (user: any)=>{
+//         this.user = user;
 
+//     this.stories$.push([this.form.value, user.auth.uid]).then(()=>{
+//       console.log('form submited');
+// });
 
-
-    this.stories$.push(this.form.value + this.uidForUser).then(()=>{
+//     });
+// TODO::validate id
+    this.stories$.push([
+      this.form.value, 
+      input
+    ]).then(()=>{
       console.log('form submited');
-})
-    });
+});
 
     const toast = await this.toastController.create({
       message: 'Guests are not yet permitted to post',

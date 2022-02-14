@@ -2,9 +2,8 @@
 
 <ion-slides mode="ios" pager="true" scrollbar="ios" [options]="slideOpts" >
 
-  <div *ngIf="groupsCollection$ | async; else groupSlidesTotal" >
 
-  <ion-slide class=" card-background-page" >
+  <ion-slide *ngIf="groupsCollection$ | async; else groupSlidesTotal" class=" card-background-page" >
 
   <ion-card 
   *ngFor="let item of groupsCollection$ | async"
@@ -24,8 +23,9 @@
     </ion-card-header>
     
   </ion-card> 
-  </ion-slide>
-</div>
+
+</ion-slide>
+
 <ng-template #groupSlidesTotal>
   <ion-slide>
 
