@@ -62,11 +62,15 @@ export class PostOnMainPage implements OnInit {
 // });
 
 //     });
-// TODO::validate id
-    this.stories$.push([
-      this.form.value, 
-      input
-    ]).then(()=>{
+// TODO::fix object error with any
+
+const postG = {
+
+  details: this.form.value,
+  userID: input
+};
+
+    this.stories$.push(input).then(()=>{
       console.log('form submited');
 });
 

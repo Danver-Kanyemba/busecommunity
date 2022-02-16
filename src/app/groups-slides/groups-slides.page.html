@@ -4,17 +4,33 @@
 
 
   <ion-slide *ngIf="groupsCollection$ | async; else groupSlidesTotal" class=" card-background-page" >
+ 
 
+<ion-avatar
+
+*ngFor="let item of groupsCollection$ | async"
+style="
+            height: 42px;
+            max-height: 42px;
+            max-width: 42px;"
+>
+  <ion-img src="./assets/jack.jpg"></ion-img>
+</ion-avatar>
+<!-- 
   <ion-card 
-  *ngFor="let item of groupsCollection$ | async"
+  
   class="ion-no-padding"
   draggable="false"
   [routerLink]="item.link"
+  style="
+  background-image: url('./assets/jack.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  "
  >
 
     <ion-card-header>
-      
-      
+   
       <ion-card-title >
         {{item.name}}
         <ion-icon name="eye-off" *ngIf="item.isLocked === 1" ></ion-icon>
@@ -22,7 +38,8 @@
       </ion-card-title>
     </ion-card-header>
     
-  </ion-card> 
+  </ion-card>  -->
+  dfvdvvffd
 
 </ion-slide>
 
