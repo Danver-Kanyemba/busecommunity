@@ -2,7 +2,9 @@
 
 
 <!-- test -->
-<ion-grid size="12">
+<ion-grid size="6">
+  <ion-row>
+    <ion-col size="6" sizeSm="12" sizeMd="6" sizeXs="12">
   <div *ngIf="stories$ | async; else loading"    >
     <div  *ngFor="let item of stories$ | async" >
 
@@ -58,8 +60,43 @@
         {{item.detail.title}} 
       </p>
     </ion-text>
-    
-    <ion-label style="
+
+    <ion-label
+    *ngIf="item.type ==='imageonly'" 
+    style="
+      border-radius: 20px; 
+      width: 100%; 
+      max-width: 400px;
+      background-image: url('/assets/{{item.detail.imageonly}}');
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      "
+      #imageOnly
+      
+      >
+      
+      <ion-segment-button 
+      style="
+  height: 300px;
+  width: 100%; 
+  max-width: 400px;
+  "
+  (click)="linkPicture(imageOnly)"
+  >
+  
+</ion-segment-button>
+
+</ion-label>
+<ion-button fill="none" (click)="onClick()">
+  <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+</ion-button>
+<ion-button class="ion-padding-horizontal" fill="none" (click)="onClick()">
+  <ion-icon slot="icon-only" name="chatbox-ellipses-outline"></ion-icon>
+</ion-button>
+    <ion-label
+    *ngIf="item.type ==='post'" 
+    style="
       border-radius: 20px; 
       width: 100%; 
       max-width: 400px;
@@ -87,8 +124,39 @@
 </ion-col>
 </ion-row>
 </div>
-</div>
+</div>      
+    </ion-col>
+    <ion-col size="6" sizeSm="12" sizeMd="6" sizeXs="12">
+      <ion-card>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Sponsored</ion-title>
+
+          </ion-toolbar>
+        </ion-header>
+        <ion-card-content>
+          <ion-button 
+              onclick="window.open('https://my.webdev.co.zw/aff.php?aff=328')"
+             expand="block" fill="none" shape="round">
+              Web Development
+            </ion-button>
+            <ion-button 
+            onclick="window.open('https://my.webdev.co.zw/aff.php?aff=328')"
+           expand="block" fill="none" shape="round">
+            Domain registration
+          </ion-button>
+          <ion-button 
+          onclick="window.open('https://my.webdev.co.zw/aff.php?aff=328')"
+         expand="block" fill="none" shape="round">
+          Web Hosting
+        </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
 </ion-grid>
+
 </ion-item>
 
   <ng-template #loading>

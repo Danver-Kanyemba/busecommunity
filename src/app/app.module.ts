@@ -25,7 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

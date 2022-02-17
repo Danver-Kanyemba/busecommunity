@@ -8,12 +8,15 @@ import { PostOnMainPageRoutingModule } from './post-on-main-routing.module';
 
 import { PostOnMainPage } from './post-on-main.page';
 
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PostOnMainPageRoutingModule
+    PostOnMainPageRoutingModule,
+    // AngularFireStorageModule
   ],
   declarations: []
 })

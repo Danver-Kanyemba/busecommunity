@@ -5,28 +5,15 @@
 
   <ion-slide *ngIf="groupsCollection$ | async; else groupSlidesTotal" class=" card-background-page" >
  
-
-<ion-avatar
-
-*ngFor="let item of groupsCollection$ | async"
-style="
-            height: 42px;
-            max-height: 42px;
-            max-width: 42px;"
->
-  <ion-img src="./assets/jack.jpg"></ion-img>
-</ion-avatar>
-<!-- 
   <ion-card 
+*ngFor="let item of groupsCollection$ | async"
   
   class="ion-no-padding"
   draggable="false"
   [routerLink]="item.link"
-  style="
-  background-image: url('./assets/jack.jpg');
+  style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url({{item.imageurl}});
   background-repeat: no-repeat;
-  background-size: cover;
-  "
+  background-size: cover;"
  >
 
     <ion-card-header>
@@ -38,8 +25,8 @@ style="
       </ion-card-title>
     </ion-card-header>
     
-  </ion-card>  -->
-  dfvdvvffd
+  </ion-card> 
+
 
 </ion-slide>
 
