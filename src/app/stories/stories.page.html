@@ -4,7 +4,7 @@
 <!-- test -->
 <ion-grid size="6">
   <ion-row>
-    <ion-col size="6" sizeSm="12" sizeMd="6" sizeXs="12">
+    <ion-col size="6" sizeSm="12" sizeMd="8" sizeXs="12">
   <div *ngIf="stories$ | async; else loading"    >
     <div  *ngFor="let item of stories$ | async" >
 
@@ -88,45 +88,52 @@
 </ion-segment-button>
 
 </ion-label>
-<ion-button fill="none" (click)="onClick()">
-  <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
-</ion-button>
-<ion-button class="ion-padding-horizontal" fill="none" (click)="onClick()">
-  <ion-icon slot="icon-only" name="chatbox-ellipses-outline"></ion-icon>
-</ion-button>
-    <ion-label
-    *ngIf="item.type ==='post'" 
-    style="
-      border-radius: 20px; 
-      width: 100%; 
-      max-width: 400px;
-      background-image: url('/assets/welcomebusecommunity.png');
-      height: 185px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      "
-      #postImage
-      
-      >
-      
-      <ion-segment-button 
-      style="
-  height: 185px;
+
+
+<ion-label
+*ngIf="item.type ==='post'" 
+style="
+  border-radius: 20px; 
   width: 100%; 
   max-width: 400px;
+  background-image: url('/assets/welcomebusecommunity.png');
+  height: 185px;
+  background-size: cover;
+  background-repeat: no-repeat;
   "
-  (click)="linkPicture(postImage)"
+  #postImage
+  
   >
   
+  <ion-segment-button 
+  style="
+height: 185px;
+width: 100%; 
+max-width: 400px;
+"
+(click)="linkPicture(postImage)"
+>
+
 </ion-segment-button>
 
 </ion-label>
+<div class="ion-text-center" style="max-width: 359px;">
+
+  <ion-button fill="none" (click)="presentActionSheet()">
+    <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+  </ion-button>
+  <ion-button style="margin-left: 10%;" class="ion-padding-horizontal" fill="none" (click)="presentActionSheet()">
+    <ion-icon slot="icon-only" name="chatbox-ellipses-outline"></ion-icon>
+  </ion-button>
+</div>
+
 </ion-col>
 </ion-row>
 </div>
 </div>      
     </ion-col>
-    <ion-col size="6" sizeSm="12" sizeMd="6" sizeXs="12">
+
+    <ion-col size="6" sizeSm="12" sizeMd="4" sizeXs="12">
       <ion-card>
         <ion-header>
           <ion-toolbar>

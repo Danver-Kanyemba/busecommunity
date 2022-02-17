@@ -2,6 +2,7 @@ import { PostImageMaximizeService } from './../post-image-maximize.service';
 import { Component, OnInit } from '@angular/core';
 import { IonLabel, MenuController } from '@ionic/angular';
 import { StoriesDataService } from '../stories-data.service';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-stories',
@@ -16,13 +17,27 @@ export class StoriesPage implements OnInit {
   constructor(
     private menu: MenuController,
     private postImageMaximizeService: PostImageMaximizeService,
-    private storiesService: StoriesDataService
+    private storiesService: StoriesDataService,
+    public actionSheetController: ActionSheetController
     ) {}
 
     ngOnInit() {
     this.test1 = this.postImageMaximizeService.urlForImage;
     this.stories$ = this.storiesService.stories$;
     }
+
+    async presentActionSheet() {
+      const actionSheet = await this.actionSheetController.create({
+        header: 'Admin',
+        cssClass: 'my-custom-class',
+      buttons: [ {
+          text: 'Comments and likes are disabled',
+          icon: 'chatbox-ellipses-outline',
+
+        }]
+      });
+      await actionSheet.present();
+      }
 
   linkPicture(input){
     console.log(input.el.style.backgroundImage);
