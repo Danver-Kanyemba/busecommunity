@@ -12,7 +12,7 @@ import { Token } from '@angular/compiler/src/ml_parser/lexer';
 })
 export class PostOnMainPage implements OnInit {
  form;
- uidForUser;
+ uidForUser='';
  user;
  stories$: AngularFireList<any[]> | undefined;
 
@@ -34,6 +34,9 @@ export class PostOnMainPage implements OnInit {
           Validators.required
         ],
       ],
+      userUid:[this.uidForUser,[
+        Validators.required
+      ]]
     });
   }
 
@@ -45,34 +48,37 @@ export class PostOnMainPage implements OnInit {
     this.menu.close('piz');
   }
 
-  getUid() {
-    // this.uidForUser = this.afAuth.auth.currentUser.uid
-    }
+
 
   async guestPost(input){
-    this.getUid();
+    this.afAuth.currentUser.then(res=>{
+      const data = {
+        data: this.form.value,
+        fuser:res.uid
+      };
+      this.form.controls.userUid.setValue(res.uid);
 
-    console.log(this.uidForUser);
-//     this.afAuth.idToken.subscribe(
-//       (user: any)=>{
-//         this.user = user;
 
-//     this.stories$.push([this.form.value, user.auth.uid]).then(()=>{
-//       console.log('form submited');
+      this.stories$.push(this.form.value).then(()=>{
+
+        console.log('form submited');
+    });
+
+
+    })
+    ;
+
+//     const postG = {
+
+//       details: this.form.value,
+//       userID: input
+// };
+
+// this.stories$.push(input).then(()=>{
+//   console.log('form submited');
 // });
 
-//     });
-// TODO::fix object error with any
 
-const postG = {
-
-  details: this.form.value,
-  userID: input
-};
-
-    this.stories$.push(input).then(()=>{
-      console.log('form submited');
-});
 
     const toast = await this.toastController.create({
       message: 'Guests are not yet permitted to post',
@@ -89,3 +95,4 @@ const postG = {
     toast.present();
   }
 }
+

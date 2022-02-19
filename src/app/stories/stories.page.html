@@ -4,7 +4,7 @@
 <!-- test -->
 <ion-grid size="6">
   <ion-row>
-    <ion-col size="6" sizeSm="12" sizeMd="8" sizeXs="12">
+    <ion-col  sizeSm="12" sizeMd="8" sizeXs="12">
   <div *ngIf="stories$ | async; else loading"    >
     <div  *ngFor="let item of stories$ | async" >
 
@@ -57,7 +57,7 @@
     </ion-label>
     <ion-text color="dark" class="ion-text-start">
       <p>
-        {{item.detail.title}} 
+        {{item.detail.title}} {{item| json}} 
       </p>
     </ion-text>
 
@@ -133,7 +133,7 @@ max-width: 400px;
 </div>      
     </ion-col>
 
-    <ion-col size="6" sizeSm="12" sizeMd="4" sizeXs="12">
+    <ion-col sizeSm="12" sizeMd="4" sizeXs="12">
       <ion-card>
         <ion-header>
           <ion-toolbar>
