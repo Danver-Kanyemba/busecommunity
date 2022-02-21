@@ -7,17 +7,12 @@
   [routerLink]="item.link"
   class="ion-text-center"
  >
- <ion-segment-button>
-  <ion-avatar>
-    <img [src]="item.imageurl" />
-  </ion-avatar>
-
+ <ion-segment-button class="ion-no-padding ion-no-margin" >
+  <ion-icon size="large" [name]="item.icon"></ion-icon>
   <ion-card-title >
     {{item.name}}
-    <ion-icon name="eye-off" *ngIf="item.isLocked === 1; else openeye" ></ion-icon>
-    <ng-template #openeye>
-      <ion-icon name="eye"></ion-icon>
-    </ng-template>
+    <ion-icon name="lock-closed-outline" *ngIf="item.isLocked === 1"></ion-icon>
+
   </ion-card-title>
 </ion-segment-button>
   </div> 

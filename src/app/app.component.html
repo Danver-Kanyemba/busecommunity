@@ -17,13 +17,17 @@
         <ion-tabs>
                 <ion-tab-bar slot="bottom">
                         <ion-tab-button tab="home">
-                                <ion-icon name="home"></ion-icon>
-                                <ion-text color="primary">
+                                <ion-icon name="home-outline"></ion-icon>
+                                <ion-text >
+                                        Home
                                 </ion-text>
                         </ion-tab-button>
 
                         <ion-tab-button tab="search">
-                                <ion-icon name="search"></ion-icon>
+                                <ion-icon  name="search"></ion-icon>
+                                <ion-text>
+                                        Search
+                                </ion-text>
                         </ion-tab-button>
 
                         <ion-tab-button
@@ -31,7 +35,7 @@
                         *ngIf="(afAuth.authState | async) === null"
                         tab="menuforcommunity"
                          >
-                         <ion-icon name="logo-google"></ion-icon>
+                         <ion-icon style="color: orangered;"  name="logo-google"></ion-icon>
                                 <ion-label>Sign In</ion-label>
                         </ion-tab-button>
 
