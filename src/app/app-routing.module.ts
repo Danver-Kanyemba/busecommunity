@@ -39,7 +39,10 @@ const routes: Routes = [
     path: 'menuforcommunity',
     loadChildren: () => import('./menuforcommunity/menuforcommunity.module').then( m => m.MenuforcommunityPageModule)
   },
-
+  {
+    path: 'insights',
+    loadChildren: () => import('./insights/insights.module').then( m => m.InsightsPageModule)
+  },
   {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
@@ -56,6 +59,7 @@ const routes: Routes = [
     path: 'pop-over',
     loadChildren: () => import('./pop-over/pop-over.module').then( m => m.PopOverPageModule)
   },
+
 
 ];
 

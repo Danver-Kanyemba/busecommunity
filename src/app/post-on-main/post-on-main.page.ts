@@ -4,6 +4,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MenuController, ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Token } from '@angular/compiler/src/ml_parser/lexer';
+import { UserService } from '../user.service';
+import firebase from 'firebase/compat/app';
 
 @Component({
   selector: 'app-post-on-main',
@@ -22,6 +24,8 @@ export class PostOnMainPage implements OnInit {
     private fb: FormBuilder,
     private db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
+    private userService: UserService
+
     ) { }
 
   ngOnInit() {
@@ -40,6 +44,12 @@ export class PostOnMainPage implements OnInit {
     });
   }
 
+  async signIn(){
+    const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+    const credential = await this.afAuth.signInWithPopup(googleAuthProvider);
+    await this.userService.updateUserData(credential.user);
+  }
+
   get title(){
     return this.form.get('title');
   }
@@ -47,8 +57,6 @@ export class PostOnMainPage implements OnInit {
   closeMenu(){
     this.menu.close('piz');
   }
-
-
 
   async guestPost(input){
     this.afAuth.currentUser.then(res=>{
@@ -58,28 +66,10 @@ export class PostOnMainPage implements OnInit {
       };
       this.form.controls.userUid.setValue(res.uid);
 
-
       this.stories$.push(this.form.value).then(()=>{
-
         console.log('form submited');
     });
-
-
-    })
-    ;
-
-//     const postG = {
-
-//       details: this.form.value,
-//       userID: input
-// };
-
-// this.stories$.push(input).then(()=>{
-//   console.log('form submited');
-// });
-
-
-
+    });
     const toast = await this.toastController.create({
       message: 'Guests are not yet permitted to post',
       position: 'bottom',
@@ -95,4 +85,3 @@ export class PostOnMainPage implements OnInit {
     toast.present();
   }
 }
-

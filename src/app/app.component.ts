@@ -29,10 +29,6 @@ export class AppComponent implements OnInit {
     await this.userService.updateUserData(credential.user);
   }
 
-  opo(input){
-    console.log(input);
-  }
-
 async openPopOver(ev){
   const popover = await this.popoverController.create({
     component: PopOverPage,

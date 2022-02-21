@@ -1,6 +1,5 @@
 <ion-app>
         <ion-menu contentId="piz" menuId="piz" side="start" type="overlay">
-
                 <ion-content>
                         <app-post-on-main></app-post-on-main>
                 </ion-content>
@@ -32,7 +31,7 @@
                         *ngIf="(afAuth.authState | async) === null"
                         tab="menuforcommunity"
                          >
-                                <ion-icon name="log-in"></ion-icon>
+                         <ion-icon name="logo-google"></ion-icon>
                                 <ion-label>Sign In</ion-label>
                         </ion-tab-button>
 
@@ -50,7 +49,6 @@
                                         <ion-img [src]="user.photoURL"></ion-img>
                                 </ion-avatar>
                         </ion-tab-button>
-
                 </ion-tab-bar>
         </ion-tabs>
 </ion-app>

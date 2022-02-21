@@ -2,27 +2,38 @@
         [formGroup]="form"
 >
 <ion-toolbar>
-        <div *ngIf="afAuth.user | async as user">
+        <div *ngIf="afAuth.user | async as user; else signintemplate">
 
                 <ion-button (click)="guestPost(user.uid)" slot="start" fill="solid" shape="round">
                         Post
                 </ion-button>
         </div>
+        <ng-template #signintemplate>
+                <ion-button (click)="signIn()" slot="start" fill="solid" shape="round">
+                        Sign In
+                </ion-button>
+        </ng-template>
+        
         <ion-button (click)="closeMenu()" slot="end" fill="clear" size="small" shape="round">
         <ion-icon slot="icon-only" name="close"></ion-icon>
     </ion-button>
 
 </ion-toolbar>
 
+<div *ngIf="afAuth.user | async as user;">
+
     <ion-grid>
             <ion-row>
                     <ion-col size="2">
-                            <ion-avatar>
-                            <ion-skeleton-text animated
-                            style="width: auto; max-height: 50px;
-                            max-width: 50px;">
-                        </ion-skeleton-text>
-                </ion-avatar>
+                        <ion-avatar
+                        style="width: inherit;
+                        height: 42px;
+                        max-height: 42px;
+                        max-width: 42px;"
+                      >
+                      
+                      <img #kudu [src]="user.photoURL" />
+                    </ion-avatar>
                     </ion-col>
                     <ion-col size="10">
 
@@ -33,11 +44,11 @@
                              <ion-item
                               *ngIf="title.invalid">
                                 <ion-text color="danger">
-                                        <h1>Please fill the filled</h1>
+                                        <p>Please fill the filled</p>
                                 </ion-text>
                              </ion-item>
                         </ion-col>
             </ion-row>
         </ion-grid>
-
+</div>
 </form>
