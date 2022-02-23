@@ -1,36 +1,27 @@
 <form 
-        [formGroup]="form"
+[formGroup]="form"
+*ngIf="afAuth.user | async as user; else signintemplate"
 >
-<ion-toolbar>
-        <div *ngIf="afAuth.user | async as user; else signintemplate">
+        <ion-toolbar>
+                        <ion-button (click)="guestPost(user.uid)" slot="start" fill="solid" shape="round">
+                                Post
+                        </ion-button>   
+                
+                        <ion-button (click)="closeMenu()" slot="end" fill="clear" size="small" shape="round">
+                                <ion-icon slot="icon-only" name="close"></ion-icon>
+                        </ion-button>
 
-                <ion-button (click)="guestPost(user.uid)" slot="start" fill="solid" shape="round">
-                        Post
-                </ion-button>
-        </div>
-        <ng-template #signintemplate>
-                <ion-button (click)="signIn()" slot="start" fill="solid" shape="round">
-                        Sign In
-                </ion-button>
-        </ng-template>
-        
-        <ion-button (click)="closeMenu()" slot="end" fill="clear" size="small" shape="round">
-        <ion-icon slot="icon-only" name="close"></ion-icon>
-    </ion-button>
-
-</ion-toolbar>
-
-<div *ngIf="afAuth.user | async as user;">
+        </ion-toolbar>
 
     <ion-grid>
             <ion-row>
-                    <ion-col size="2">
+                        <ion-col size="2">
                         <ion-avatar
-                        style="width: inherit;
-                        height: 42px;
-                        max-height: 42px;
-                        max-width: 42px;"
-                      >
+                                style="width: inherit;
+                                        height: 42px;
+                                        max-height: 42px;
+                                        max-width: 42px;"
+                                        >
                       
                       <img #kudu [src]="user.photoURL" />
                     </ion-avatar>
@@ -48,7 +39,18 @@
                                 </ion-text>
                              </ion-item>
                         </ion-col>
-            </ion-row>
+                </ion-row>
         </ion-grid>
-</div>
 </form>
+
+<ng-template #signintemplate>
+        <div
+        style="display: block;"
+                class="ion-text-center"
+        >
+                <ion-button (click)="signIn()" class="ion-text-capitalize" slot="start" fill="solid" shape="round">
+                        Sign In<br>
+                        to post
+                </ion-button>
+        </div>
+</ng-template>

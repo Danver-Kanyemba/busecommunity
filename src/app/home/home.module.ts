@@ -1,3 +1,4 @@
+import { WhatsappGroupsPage } from './../whatsapp-groups/whatsapp-groups.page';
 import { UserTopToolbarPage } from './../user-top-toolbar/user-top-toolbar.page';
 import { StoriesPage } from './../stories/stories.page';
 import { GroupsSlidesPage } from './../groups-slides/groups-slides.page';
@@ -21,7 +22,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     HomePage,
     GroupsSlidesPage,
     StoriesPage,
-    UserTopToolbarPage
+    UserTopToolbarPage,
+    WhatsappGroupsPage
   ]
 })
 export class HomePageModule {}

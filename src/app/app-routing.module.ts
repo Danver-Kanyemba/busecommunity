@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'pop-over',
     loadChildren: () => import('./pop-over/pop-over.module').then( m => m.PopOverPageModule)
   },
+  {
+    path: 'whatsapp-groups',
+    loadChildren: () => import('./whatsapp-groups/whatsapp-groups.module').then( m => m.WhatsappGroupsPageModule)
+  },
 
 
 ];
