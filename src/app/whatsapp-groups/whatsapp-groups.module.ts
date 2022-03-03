@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { WhatsappGroupsPageRoutingModule } from './whatsapp-groups-routing.module';
 
 import { WhatsappGroupsPage } from './whatsapp-groups.page';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WhatsappGroupsPageRoutingModule
+    WhatsappGroupsPageRoutingModule,
+    AngularFireStorageModule
   ],
   declarations: []
 })

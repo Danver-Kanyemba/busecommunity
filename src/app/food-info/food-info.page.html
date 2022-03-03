@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Food information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="12">
+      <ion-item-group>
+        <div *ngIf="foodCollection$| async; else loading" >
+
+          <ion-item *ngFor="let item of foodCollection$ | async" >
+            <ion-text>
+              {{item.details}}
+              <br>
+              Amount: 
+              <ion-chip color="primary" mode="ios" outline="true">
+                <ion-label>{{item.amount}}</ion-label>
+              </ion-chip>
+            </ion-text>
+            <ion-text>
+              
+            </ion-text>
+          </ion-item>
+        </div>
+        <ng-template #loading>
+          <div class="ion-text-center" style="display: block ruby;">
+            <div
+              style="margin-top: 150px;"
+            ></div>
+      
+        <br>
+            <ion-spinner name="circular" color="primary"></ion-spinner>
+              <div style="margin-top: 150px;"></div>  
+          </div>
+        </ng-template>
+        
+
+
+      </ion-item-group>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+</ion-content>

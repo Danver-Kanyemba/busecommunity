@@ -7,8 +7,9 @@
     <ion-col  sizeSm="12" sizeMd="8" sizeXs="12">
   <div *ngIf="stories$ | async; else loading"    >
     <div  *ngFor="let item of stories$ | async" >
-
-    <ion-row>
+<div style="margin-left: 0px; margin-right: 0px;">
+  
+    <ion-row style="border-bottom: 1px solid grey;">
       <ion-col size="2">
         <ion-row style="height: 100%;" > 
           <div style="display: block ruby; width: 100%;" class="ion-text-right">
@@ -48,7 +49,7 @@
     </ion-label>
     <ion-label>
       <ion-text>
-        <p class="ion-text-right">
+        <p class="ion-text-left">
           {{item.date_posted}}
         </p>
       </ion-text>
@@ -88,34 +89,6 @@
 
 </ion-label>
 
-
-<ion-label
-*ngIf="item.type ==='post'" 
-style="
-  border-radius: 20px; 
-  width: 100%; 
-  max-width: 400px;
-  background-image: url('/assets/welcomebusecommunity.png');
-  height: 185px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  "
-  #postImage
-  
-  >
-  
-  <ion-segment-button 
-  style="
-height: 185px;
-width: 100%; 
-max-width: 400px;
-"
-(click)="linkPicture(postImage)"
->
-
-</ion-segment-button>
-
-</ion-label>
 <div class="ion-text-center" style="max-width: 359px;">
 
   <ion-button fill="none" (click)="presentActionSheet()">
@@ -124,11 +97,17 @@ max-width: 400px;
   <ion-button style="margin-left: 10%;" class="ion-padding-horizontal" fill="none" (click)="presentActionSheet()">
     <ion-icon slot="icon-only" name="chatbox-ellipses-outline"></ion-icon>
   </ion-button>
+  <div>
+  </div>
 </div>
 
 </ion-col>
 </ion-row>
+
 </div>
+
+</div>
+
 </div>      
     </ion-col>
 
@@ -166,11 +145,13 @@ max-width: 400px;
 </ion-item>
 
   <ng-template #loading>
-    <div class="ion-text-center">
+    <div class="ion-text-center" style="display: block ruby;">
       <div
         style="margin-top: 150px;"
       ></div>
-      <ion-spinner name="circular" color="primary"></ion-spinner>
-        <div style="margin-top: 150px;"></div>  
+
+  <br>
+      <div class="loadingBox"></div>
+  <div style="margin-top: 150px;"></div>  
     </div>
   </ng-template>

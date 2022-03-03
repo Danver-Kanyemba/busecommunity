@@ -1,3 +1,4 @@
+import { WhatsappDataService } from './../whatsapp-data.service';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 
@@ -7,15 +8,24 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
   styleUrls: ['./whatsapp-groups.page.scss'],
 })
 export class WhatsappGroupsPage implements OnInit {
+  whatsappGroups$;
 
-  constructor(private storage: AngularFireStorage) { }
+  constructor(
+    public storage: AngularFireStorage,
+    private whatsappGroupService: WhatsappDataService
+    ) { }
 
   ngOnInit() {
-
+    this.whatsappGroups$ = this.whatsappGroupService.whatsappGroups$;
   }
 
-  get getImageURL(){
-    const ref = this.storage.ref('users/davideast.jpg');
-    return ref.getDownloadURL();
+  // getImageURL(input){
+  //   const ref = this.storage.ref('whatsappgroups/'+input);
+
+  //   console.log(ref.getDownloadURL());
+  // }
+
+  clickWhatsapp(){
+    window.open('https://wa.me/+263784017784');
   }
 }

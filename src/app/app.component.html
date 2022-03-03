@@ -16,7 +16,7 @@
 
         <ion-tabs>
                 <ion-tab-bar slot="bottom">
-                        <ion-tab-button tab="home">
+                        <ion-tab-button tab="home" class="ion-no-margin ion-no-padding">
                                 <ion-icon name="home-outline"></ion-icon>
                                 <ion-text >
                                         Home
@@ -29,6 +29,16 @@
                                         Search
                                 </ion-text>
                         </ion-tab-button>
+
+                        <!-- <ion-tab-button tab="houses">
+                                <ion-icon name="home"></ion-icon>
+                                <ion-label>houses</ion-label>
+                        </ion-tab-button>
+                        
+                        <ion-tab-button tab="food-info">
+                                <ion-icon name="ice-cream"></ion-icon>
+                                <ion-label>Food</ion-label>
+                        </ion-tab-button> -->
 
                         <ion-tab-button
                         (click)="signIn()"

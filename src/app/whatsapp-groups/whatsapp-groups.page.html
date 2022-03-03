@@ -1,10 +1,45 @@
-<ion-card>
-  <ion-card-header>
-    <ion-img [src]="image"></ion-img>
-    <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-    <ion-card-title>Awesome Title</ion-card-title>
+<ion-text >
+  <p>
+    <b>
+      On-campus whatsapp groups
+    </b>
+  </p>
+</ion-text>
+<div class="scrolling-wrapper" >
+  <div
+  *ngIf="whatsappGroups$ |async; else whatsappGroupLoading" 
+  >
+  <ion-card *ngFor="let item of whatsappGroups$ |async"  >
+    <ion-card-header>
+    <ion-img [src]="'whatsappgroups/'+item.imageURL | getDownloadURL "></ion-img>
+    <ion-card-title class="ion-text-center">{{item.name}}</ion-card-title>
+    <ion-card-subtitle class="ion-text-center">
+      {{item.subtitle}}
+    </ion-card-subtitle>
   </ion-card-header>
-  <ion-card-content>
-    Awesome content
+  
+  <ion-card-content class="ion-text-center">
+    <ion-button 
+    (click)="clickWhatsapp()"
+    slot="end" 
+    size="small" 
+    shape="round"
+    fill="outline"
+    >
+    Join via admin
+    <ion-icon  
+    name="logo-whatsapp" ></ion-icon>
+  </ion-button>
   </ion-card-content>
 </ion-card>
+</div>
+</div>
+
+<ng-template #whatsappGroupLoading >
+<div class="scrolling-wrapper" >
+  <div class="loadingBox"></div>
+  <div class="loadingBox"></div>
+  <div class="loadingBox"></div>
+
+</div>
+</ng-template>

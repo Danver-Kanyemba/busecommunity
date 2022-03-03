@@ -8,8 +8,10 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    redirectTo: '',
-    pathMatch: 'full'
+    // redirectTo: '',
+    // pathMatch: 'full'
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+
   },
   {
     path: 'stories',
@@ -42,6 +44,10 @@ const routes: Routes = [
   {
     path: 'insights',
     loadChildren: () => import('./insights/insights.module').then( m => m.InsightsPageModule)
+  },
+  {
+    path: 'food-info',
+    loadChildren: () => import('./food-info/food-info.module').then( m => m.FoodInfoPageModule)
   },
   {
     path: '**',
