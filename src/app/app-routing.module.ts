@@ -50,6 +50,10 @@ const routes: Routes = [
     loadChildren: () => import('./food-info/food-info.module').then( m => m.FoodInfoPageModule)
   },
   {
+    path: 'whatsapp-groups',
+    loadChildren: () => import('./whatsapp-groups/whatsapp-groups.module').then( m => m.WhatsappGroupsPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
   },
@@ -64,10 +68,6 @@ const routes: Routes = [
   {
     path: 'pop-over',
     loadChildren: () => import('./pop-over/pop-over.module').then( m => m.PopOverPageModule)
-  },
-  {
-    path: 'whatsapp-groups',
-    loadChildren: () => import('./whatsapp-groups/whatsapp-groups.module').then( m => m.WhatsappGroupsPageModule)
   },
 
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as firebase from 'firebase/compat';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { UserService } from '../user.service';
+import firebase from 'firebase/compat/app';
 
 @Component({
   selector: 'app-user-top-toolbar',
@@ -8,7 +10,11 @@ import * as firebase from 'firebase/compat';
 })
 export class UserTopToolbarPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public afAuth: AngularFireAuth,
+    private userService: UserService
+
+  ) { }
 
   ngOnInit() {
   }
@@ -21,5 +27,13 @@ export class UserTopToolbarPage implements OnInit {
   }
   clickLinkedIn(){
     window.open('https://www.linkedin.com/in/danver-kanyemba/');
+  }
+
+
+  async signIn(){
+
+    const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+    const credential = await this.afAuth.signInWithPopup(googleAuthProvider);
+    await this.userService.updateUserData(credential.user);
   }
 }

@@ -21,10 +21,10 @@
 
 <ng-template #groupSlidesTotal>
   <div class="scrolling-wrapper">
-<div class="loadingCircles ion-margin-horizontal"></div>
-<div class="loadingCircles ion-margin-horizontal"></div>
-<div class="loadingCircles ion-margin-horizontal"></div>
-<div class="loadingCircles ion-margin-horizontal"></div>
+    <div class="loadingCircles ion-margin-horizontal" *ngFor="let item of groupLoadingNumber">
+
+      <div class="loadingText">....</div>
+    </div>
 
   </div>
 </ng-template>

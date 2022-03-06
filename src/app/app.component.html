@@ -23,46 +23,32 @@
                                 </ion-text>
                         </ion-tab-button>
 
-                        <ion-tab-button tab="search">
+                        <!-- <ion-tab-button tab="search">
                                 <ion-icon  name="search"></ion-icon>
                                 <ion-text>
                                         Search
                                 </ion-text>
+                        </ion-tab-button> -->
+                        <ion-tab-button tab="whatsapp-groups" class="ion-no-margin ion-no-padding">
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                                <ion-text>
+                                        Whatsapp
+                                </ion-text>
                         </ion-tab-button>
-
-                        <!-- <ion-tab-button tab="houses">
+                        <ion-tab-button tab="houses" class="ion-no-margin ion-no-padding">
                                 <ion-icon name="home"></ion-icon>
                                 <ion-label>houses</ion-label>
                         </ion-tab-button>
                         
-                        <ion-tab-button tab="food-info">
+                        <ion-tab-button tab="food-info" class="ion-no-margin ion-no-padding">
                                 <ion-icon name="ice-cream"></ion-icon>
                                 <ion-label>Food</ion-label>
-                        </ion-tab-button> -->
-
-                        <ion-tab-button
-                        (click)="signIn()"
-                        *ngIf="(afAuth.authState | async) === null"
-                        tab="menuforcommunity"
-                         >
-                         <ion-icon style="color: orangered;"  name="logo-google"></ion-icon>
-                                <ion-label>Sign In</ion-label>
                         </ion-tab-button>
 
-                        <ion-tab-button tab="home"
-                                *ngIf="afAuth.user | async as user"
-                                tab="menuforcommunity"
-                        >
-                                <ion-avatar
-                                        style="
-                                        width: inherit;
-                                        height: 42px;
-                                        max-height: 42px;
-                                        max-width: 42px;"
-                                        >
-                                        <ion-img [src]="user.photoURL"></ion-img>
-                                </ion-avatar>
+                        <ion-tab-button tab="menuforcommunity" class="ion-no-margin ion-no-padding">
+                                <ion-icon name="caret-up-circle-outline"></ion-icon>
                         </ion-tab-button>
+
                 </ion-tab-bar>
         </ion-tabs>
 </ion-app>

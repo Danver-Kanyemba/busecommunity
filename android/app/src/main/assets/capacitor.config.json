@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "google3",
+	"appId": "io.buse.community",
+	"appName": "BUSE Community",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }

@@ -9,7 +9,7 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 })
 export class WhatsappGroupsPage implements OnInit {
   whatsappGroups$;
-
+  noOfLoading= [1,2,3,4,5];
   constructor(
     public storage: AngularFireStorage,
     private whatsappGroupService: WhatsappDataService

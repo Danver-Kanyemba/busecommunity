@@ -10,43 +10,46 @@
   *ngIf="afAuth.user | async as user"
   >
 
-  <ion-card  
-  class="ion-margin-horizontal ion-margin-vertical ion-text-center ion-padding-horizontal" >
-  <ion-header style="display: inline;">
-    <div
-     style="display: block ruby; width: 100%;" 
+  <ion-card>
+  <ion-header
+  >
+  <div
+  style="display: flex; justify-content: center; align-items: center;" 
      class="ion-text-center">
           
       <ion-avatar
         style="
         width: inherit;
-        height: 200px;
-        max-height: 200px;
-        max-width: 200px;"
+        height: 100px;
+        max-height: 100px;
+        max-width: 100px;"
         (click)="showAvatar(user.photoURL)"
         >
         <ion-img [src]="user.photoURL"></ion-img>
         </ion-avatar> 
-        </div>
-<br>
-
-        <ion-card-title>
-          {{user.displayName}}   
-        </ion-card-title>
-
-        <ion-card-subtitle>
-          {{user.email}}    
-        </ion-card-subtitle>
         
-        <ion-text color="secondary">
-          <p>These details can be changed through your email not on this platform</p>
-        </ion-text>
+        <ion-card-title>
+          {{user.displayName}} <br>  
+        </ion-card-title>
+        <br>
+      </div>
+        <div style="text-align: center;">
+
+          
+          <ion-card-subtitle>
+            {{user.email}}    
+          </ion-card-subtitle>
+          
+          <ion-text color="secondary">
+            <p>These details can be changed through your email not on this platform</p>
+          </ion-text>
+        </div>
         <ion-button (click)="signOut()" color="light" expand="block">
           <ion-icon slot="start" name="log-out"></ion-icon>
           Sign out
         </ion-button>
       </ion-header>
-         
+      
       </ion-card>
 </div>
 <app-about></app-about>

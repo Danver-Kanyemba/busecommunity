@@ -17,6 +17,9 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     WhatsappGroupsPageRoutingModule,
     AngularFireStorageModule
   ],
-  declarations: []
+  declarations: [
+      WhatsappGroupsPage
+
+    ]
 })
 export class WhatsappGroupsPageModule {}

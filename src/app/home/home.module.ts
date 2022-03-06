@@ -1,4 +1,3 @@
-import { WhatsappGroupsPage } from './../whatsapp-groups/whatsapp-groups.page';
 import { UserTopToolbarPage } from './../user-top-toolbar/user-top-toolbar.page';
 import { StoriesPage } from './../stories/stories.page';
 import { GroupsSlidesPage } from './../groups-slides/groups-slides.page';
@@ -24,8 +23,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     HomePage,
     GroupsSlidesPage,
     StoriesPage,
-    UserTopToolbarPage,
-    WhatsappGroupsPage
+    UserTopToolbarPage
   ]
 })
 export class HomePageModule {}

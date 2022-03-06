@@ -1,11 +1,12 @@
 <ion-toolbar>
 
 <ion-img 
+  class="ion-margin-horizontal"
   slot="start" 
   style="width: 50px; height: 50px;" 
-  src="./assets/busecommunity.svg"></ion-img>
+  src="./assets/busecommunity50.png"></ion-img>
 
-
+<!-- 
   <ion-button
   (click)="clickFacebook()"
   onclick=''
@@ -14,7 +15,7 @@
   shape="round"
   fill="none" >
   <ion-icon  
-  color="primary"
+  color="dark"
   name="logo-facebook" ></ion-icon>
 </ion-button>
 
@@ -25,7 +26,7 @@
     shape="round"
     fill="none">
     <ion-icon  
-    color="primary"
+    color="dark"
     name="logo-whatsapp" ></ion-icon>
   </ion-button>
   
@@ -36,7 +37,34 @@
    shape="round"
    fill="none">
    <ion-icon  
-   color="primary"
+   color="dark"
     name="logo-linkedin" ></ion-icon>
-  </ion-button>  
+  </ion-button>   -->
+<div style="display: flex; justify-content: right; align-items: right;">
+
+  <ion-tab-button
+  (click)="signIn()"
+  *ngIf="(afAuth.authState | async) === null"
+  tab="menuforcommunity"
+  fill="none"
+  >
+  <ion-icon style="color: orangered;"  name="logo-google"></ion-icon>
+  <ion-label>Sign In</ion-label>
+  </ion-tab-button>
+  
+  <ion-tab-button tab="home"
+  *ngIf="afAuth.user | async as user"
+  tab="menuforcommunity"
+  >
+  <ion-avatar
+  style="
+                  width: inherit;
+                  height: 42px;
+                  max-height: 42px;
+                  max-width: 42px;"
+                  >
+                  <ion-img [src]="user.photoURL"></ion-img>
+                </ion-avatar>
+  </ion-tab-button>
+</div>
 </ion-toolbar>

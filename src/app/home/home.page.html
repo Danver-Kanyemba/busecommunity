@@ -1,7 +1,10 @@
 <ion-content  class="ion-margin-horizontal">
-  <app-user-top-toolbar></app-user-top-toolbar>
-  <app-groups-slides></app-groups-slides>
-  <app-whatsapp-groups></app-whatsapp-groups>
+  <ion-item-divider>
+    <ion-label>
+      <app-user-top-toolbar></app-user-top-toolbar>
+    </ion-label>
+  </ion-item-divider>
+  <!-- <app-groups-slides></app-groups-slides> -->
   <app-stories></app-stories>
 
   <!-- Fab Buttons -->
@@ -47,6 +50,6 @@
 </ion-fab>
   
   <ion-toolbar>
-    <ion-title slot="start" class="ion-text-left">From DanverSoft</ion-title>
+    <ion-title slot="start" class="ion-text-left" onclick="window.open('https://danver-kanyemba.github.io/')">From DanverSoft</ion-title>
   </ion-toolbar>
 </ion-content>

@@ -2,7 +2,7 @@
   "name": "busecommunity",
   "version": "0.0.1",
   "author": "Danver Kanyemba",
-  "homepage": "https://ionicframework.com/",
+  "homepage": "https://busecommunity.web.app/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -65,5 +65,5 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
   },
-  "description": "Buse Cmmunity website"
+  "description": "BUSE Community website. For all entertainment, events and news happening at Bindura University of Science Education "
 }

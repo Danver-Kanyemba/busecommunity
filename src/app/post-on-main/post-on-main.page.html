@@ -32,12 +32,15 @@
                              formControlName="title"
                              rows="12"
                              placeholder="Type Something here......"></ion-textarea>
-                             <ion-item
-                              *ngIf="title.invalid">
+                             <div
+                              *ngIf="title?.touched && title.invalid">
                                 <ion-text color="danger">
                                         <p>Please fill the filled</p>
                                 </ion-text>
-                             </ion-item>
+                                <ion-button expand="block" fill="clear" shape="round">
+                                        <ion-icon name="camera"></ion-icon>fvf
+                                </ion-button>
+                             </div>
                         </ion-col>
                 </ion-row>
         </ion-grid>
