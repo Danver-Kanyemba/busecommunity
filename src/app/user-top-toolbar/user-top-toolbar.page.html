@@ -40,13 +40,14 @@
    color="dark"
     name="logo-linkedin" ></ion-icon>
   </ion-button>   -->
-<div style="display: flex; justify-content: right; align-items: right;">
+<ion-buttons >
 
   <ion-tab-button
   (click)="signIn()"
   *ngIf="(afAuth.authState | async) === null"
   tab="menuforcommunity"
   fill="none"
+  slot="right"
   >
   <ion-icon style="color: orangered;"  name="logo-google"></ion-icon>
   <ion-label>Sign In</ion-label>
@@ -66,5 +67,5 @@
                   <ion-img [src]="user.photoURL"></ion-img>
                 </ion-avatar>
   </ion-tab-button>
-</div>
+</ion-buttons>
 </ion-toolbar>

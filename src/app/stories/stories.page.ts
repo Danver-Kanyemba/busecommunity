@@ -1,8 +1,9 @@
 import { PostImageMaximizeService } from './../post-image-maximize.service';
 import { Component, OnInit } from '@angular/core';
-import { IonLabel, MenuController } from '@ionic/angular';
+import { IonLabel, IonRefresher, MenuController } from '@ionic/angular';
 import { StoriesDataService } from '../stories-data.service';
 import { ActionSheetController } from '@ionic/angular';
+import { RefresherEventDetail } from '@ionic/core';
 
 @Component({
   selector: 'app-stories',
@@ -39,8 +40,15 @@ export class StoriesPage implements OnInit {
       await actionSheet.present();
       }
 
-  linkPicture(input){
-    console.log(input.el.style.backgroundImage);
+      async refreshStories($event){
+        this.stories$ = await this.storiesService.stories$;
+        setTimeout(()=>{
+          $event.target.complete();
+        },3000);
+
+      }
+        linkPicture(input){
+          console.log(input.el.style.backgroundImage);
     const gg = input.el.style.backgroundImage.split('"');
     this.postImageMaximizeService.urlForImage = gg[1];
     this.menu.toggle('imagePost');
@@ -65,5 +73,7 @@ export class StoriesPage implements OnInit {
       console.log('voted for Danver');
     }
 }
-
+joinWhatsapp(input){
+  window.open(input);
+}
 }

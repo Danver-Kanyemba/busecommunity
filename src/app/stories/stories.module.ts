@@ -7,13 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { StoriesPageRoutingModule } from './stories-routing.module';
 
 import { StoriesPage } from './stories.page';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    StoriesPageRoutingModule
+    StoriesPageRoutingModule,
+    AngularFireStorageModule
+
   ],
   declarations: []
 })

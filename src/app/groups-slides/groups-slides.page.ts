@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class GroupsSlidesPage implements OnInit {
   slideOpts={  initialSlide:0 };
   groupsCollection$;
-  groupLoadingNumber=[1,2,3,4,5,6,7]
+  groupLoadingNumber=[1,2,3,4,5,6,7];
 
   constructor(
     private groupsCollectionService: GroupsForCommunityService
