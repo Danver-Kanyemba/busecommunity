@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhatsappGroupsPage implements OnInit {
   whatsappGroups$;
-  noOfLoading= [1,2,3,4,5];
   constructor(
     private whatsappGroupService: WhatsappDataService
     ) { }

@@ -14,7 +14,7 @@ export class StoriesPage implements OnInit {
   isThumbsUpVisible= 1;
   test1;
   stories$;
-
+  
   constructor(
     private menu: MenuController,
     private postImageMaximizeService: PostImageMaximizeService,
@@ -26,7 +26,10 @@ export class StoriesPage implements OnInit {
     this.test1 = this.postImageMaximizeService.urlForImage;
     this.stories$ = this.storiesService.stories$;
     }
-
+    test(test){
+      console.log(test);
+      
+    }
     async presentActionSheet() {
       const actionSheet = await this.actionSheetController.create({
         header: 'Admin',

@@ -72,13 +72,13 @@
     </ion-text>
 
    
-      {{item.images|getDownloadURL}}
+    <span [hidden]="true" #rere (click)="test(rere)">{{item.detail.imageonly | getDownloadURL}}</span>
     <ion-label
+    [ngStyle]="{ 'background-image': 'url('+ rere.innerHTML +')'}"
     style="
       border-radius: 20px; 
       width: 100%; 
       max-width: 400px;
-      background-image: url('{{item.detail.imageonly | getDownloadURL}}');
       height: 300px;
       background-size: cover;
       background-repeat: no-repeat;
@@ -86,12 +86,11 @@
       #imageOnly
       *ngIf="item.type ==='imageonly'" 
       >
-      {{item}}
       <ion-segment-button 
       style="
-  height: 300px;
-  width: 100%; 
-  max-width: 400px;
+    height: 300px;
+    width: 100%; 
+    max-width: 400px;
   "
   (click)="linkPicture(imageOnly)"
   >
