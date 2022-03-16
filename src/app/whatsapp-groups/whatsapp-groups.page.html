@@ -15,7 +15,7 @@
   <div
   *ngIf="whatsappGroups$ |async; else whatsappGroupLoading" 
   >
-  <ion-card *ngFor="let item of whatsappGroups$ |async"  >
+  <ion-card *ngFor="let item of whatsappGroups$ |async" class="ion-no-border ion-no-margin" >
     <ion-card-header>
       <ion-img [src]="'whatsappgroups/'+item.imageURL | getDownloadURL "></ion-img>
     <ion-card-title class="ion-text-center">{{item.name}}</ion-card-title>

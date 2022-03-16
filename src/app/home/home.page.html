@@ -50,14 +50,27 @@
   </ion-fab-list>
 </ion-fab>
   
-  <ion-toolbar>
+<ion-toolbar class="ion-padding-horizontal">
+  <ion-text >
+    Download the android app for android 5 or later
+    <ion-button 
+    color="light"  
+    onclick="window.open('https://drive.google.com/file/d/118S7pNUDr2OIasAauJJhVkr3DIssAWuY/view?usp=sharing')">
+      <ion-icon name="download"></ion-icon>
+      Here
+    </ion-button>
+    
+</ion-text>
+</ion-toolbar>
+
+  <ion-toolbar>              
     <ion-title slot="start" class="ion-text-left" onclick="window.open('https://danversoft.co.zw')">
       <ion-img style="width: 50px; height: 50px;" src="./assets/logo.png"></ion-img>
       </ion-title>
-      <ion-text>
-        <p>DanverSoft Copyright 2021-2022</p>
-      </ion-text>
-      
 
+      
+        <ion-text>
+        <p>DanverSoft Copyright 2021-2022</p>
+        </ion-text>
   </ion-toolbar>
 </ion-content>

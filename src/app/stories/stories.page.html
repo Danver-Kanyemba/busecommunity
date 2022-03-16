@@ -72,7 +72,7 @@
     </ion-text>
 
    
-    <span [hidden]="true" #rere (click)="test(rere)">{{item.detail.imageonly | getDownloadURL}}</span>
+    <span [hidden]="true" #rere >{{item.detail.imageonly | getDownloadURL}}</span>
     <ion-label
     [ngStyle]="{ 'background-image': 'url('+ rere.innerHTML +')'}"
     style="

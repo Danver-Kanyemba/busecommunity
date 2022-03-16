@@ -5,7 +5,7 @@ import { StoriesDataService } from '../stories-data.service';
 import { ActionSheetController } from '@ionic/angular';
 import { RefresherEventDetail } from '@ionic/core';
 
-@Component({
+@Component({  
   selector: 'app-stories',
   templateUrl: './stories.page.html',
   styleUrls: ['./stories.page.scss'],
@@ -26,10 +26,7 @@ export class StoriesPage implements OnInit {
     this.test1 = this.postImageMaximizeService.urlForImage;
     this.stories$ = this.storiesService.stories$;
     }
-    test(test){
-      console.log(test);
-      
-    }
+
     async presentActionSheet() {
       const actionSheet = await this.actionSheetController.create({
         header: 'Admin',
@@ -51,14 +48,12 @@ export class StoriesPage implements OnInit {
 
       }
         linkPicture(input){
-          console.log(input.el.style.backgroundImage);
     const gg = input.el.style.backgroundImage.split('"');
     this.postImageMaximizeService.urlForImage = gg[1];
     this.menu.toggle('imagePost');
   }
 
   showAvatar(input){
-    console.log(input);
     const gg = input.src;
 
     this.postImageMaximizeService.urlForImage = gg;

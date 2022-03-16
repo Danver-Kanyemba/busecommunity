@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package io.buse.community;
 
 import com.getcapacitor.BridgeActivity;
 
