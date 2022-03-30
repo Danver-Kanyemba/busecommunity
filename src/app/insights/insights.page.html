@@ -5,39 +5,11 @@
 </ion-header>
 
 <ion-content>
-
-  <div class="scrolling-wrapper"> 
-  
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-dfdfd
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-<ion-avatar class="card" style="width: 250px; height: 250px;">
-  <img src="./assets/busecommunity.svg" />
-</ion-avatar>
-</div>
+  <div
+  *ngFor="let item of ['blue','red']" 
+  [style]="{'background-color': item}"
+  style="height:100%;
+  width:100%;
+  "
+  ></div>
 </ion-content>
