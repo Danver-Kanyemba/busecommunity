@@ -7,3 +7,47 @@
     display: inline-block;
   }
 }
+
+ion-content{
+  height: 100%;
+}
+
+#diamonds{
+  display: flex;
+  justify-content: center;
+  //  align-items: center;
+  height: 100%;
+
+  div{
+    max-width: 340px;
+    max-height: 340px;
+    // height: 340px;
+    
+    height:100%;
+    width:100%;
+  }
+}
+
+ion-grid{
+  display: block;
+  // text-align: center;
+  // justify-content: center;
+  //  align-items: center;
+  height: 100%;
+  ion-row{
+    height: 100%;
+    // max-height;
+  }
+  ion-col{
+  display: flex;
+    justify-content: center;
+    div{
+    max-width: 340px;
+    max-height: 900px;
+    // height: 340px;
+    
+    height:100%;
+    width:100%;
+    }
+  }
+}

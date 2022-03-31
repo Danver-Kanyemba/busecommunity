@@ -5,11 +5,22 @@
 </ion-header>
 
 <ion-content>
+
+<!-- <div id="diamonds">
+
   <div
   *ngFor="let item of ['blue','red']" 
   [style]="{'background-color': item}"
-  style="height:100%;
-  width:100%;
-  "
+  
   ></div>
+</div> -->
+
+<ion-grid class="ion-no-margin ion-no-padding">
+  <ion-row   *ngFor="let item of ['blue','red']" class="ion-no-margin ion-no-padding">
+    <ion-col size="12" class="ion-no-margin ion-no-padding" >
+      <div [style]="{'background-color': item}"></div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
 </ion-content>

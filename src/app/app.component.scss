@@ -1,6 +1,14 @@
 ion-tab-bar {
+  --color: black;
   ion-tab-button {
     margin: 0;
     padding: 0;
   }
+}
+
+ion-tab-bar
+ {
+  //  --color:white;
+  --background: white;
+  --ion-color-base: white !important;
 }
