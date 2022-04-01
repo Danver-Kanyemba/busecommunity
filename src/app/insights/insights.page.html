@@ -18,7 +18,31 @@
 <ion-grid class="ion-no-margin ion-no-padding">
   <ion-row   *ngFor="let item of ['blue','red']" class="ion-no-margin ion-no-padding">
     <ion-col size="12" class="ion-no-margin ion-no-padding" >
-      <div [style]="{'background-color': item}"></div>
+      <div [style]="{'background-color': item}">
+        <ion-fab vertical="bottom" horizontal="center" style="margin-left: -103px;" slot="fixed">
+          <ion-fab-button color="light">
+            <ion-avatar
+            style="width: inherit;
+            height: 42px;
+            max-height: 42px;
+            max-width: 42px;"
+          >
+          
+          <img #kudu src="./assets/IMG-20211129-WA0005.jpg" />
+        </ion-avatar>
+          </ion-fab-button>
+        </ion-fab>
+        <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+          <ion-fab-button size="small" color="dark">
+            <ion-icon name="heart"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+        <ion-fab translucent="true" vertical="bottom" horizontal="center" style="margin-left: 43px;" slot="fixed" mode="ios">
+          <ion-fab-button size="small" color="dark">
+            <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </div>
     </ion-col>
   </ion-row>
 </ion-grid>
