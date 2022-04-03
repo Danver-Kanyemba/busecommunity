@@ -16,10 +16,24 @@
 </div> -->
 
 <ion-grid class="ion-no-margin ion-no-padding">
-  <ion-row   *ngFor="let item of ['blue','red']" class="ion-no-margin ion-no-padding">
+  <!-- <div *ngIf="stories$ | async; else loading"    > -->
+  <ion-row   *ngFor="let item of ['','']" class="ion-no-margin ion-no-padding">
     <ion-col size="12" class="ion-no-margin ion-no-padding" >
-      <div [style]="{'background-color': item}">
-        <ion-fab vertical="bottom" horizontal="center" style="margin-left: -103px;" slot="fixed">
+      <div [style]="{'background-color': 'black'}">
+
+        <ion-label>
+          <ion-text>
+            <p class="ion-text-left ion-padding" style="color: grey;" >
+              <b>
+                12/05/2022
+              </b>
+            </p>
+          </ion-text>
+        </ion-label>
+<ion-label>Label</ion-label>
+
+        <!-- fabs -->
+        <ion-fab vertical="center" horizontal="end" slot="fixed">
           <ion-fab-button color="light">
             <ion-avatar
             style="width: inherit;
@@ -32,12 +46,12 @@
         </ion-avatar>
           </ion-fab-button>
         </ion-fab>
-        <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab vertical="center" horizontal="end" slot="fixed" class="ion-margin-vertical">
           <ion-fab-button size="small" color="dark">
             <ion-icon name="heart"></ion-icon>
           </ion-fab-button>
         </ion-fab>
-        <ion-fab translucent="true" vertical="bottom" horizontal="center" style="margin-left: 43px;" slot="fixed" mode="ios">
+        <ion-fab translucent="true" vertical="bottom" horizontal="end" slot="fixed">
           <ion-fab-button size="small" color="dark">
             <ion-icon name="chatbox-ellipses-outline"></ion-icon>
           </ion-fab-button>
@@ -45,6 +59,16 @@
       </div>
     </ion-col>
   </ion-row>
+  <!-- </div> -->
 </ion-grid>
 
+<!-- <ng-template #loading>
+  <div style="display: flex; justify-content: center; align-items: center; height: 500px;">
+    <ion-spinner name="crescent" color="primary"></ion-spinner>
+
+  <ion-text color="primary">
+    <p>Getting Stories</p>
+  </ion-text>
+</div>    
+</ng-template> -->
 </ion-content>

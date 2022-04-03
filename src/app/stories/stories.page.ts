@@ -5,7 +5,7 @@ import { StoriesDataService } from '../stories-data.service';
 import { ActionSheetController } from '@ionic/angular';
 import { RefresherEventDetail } from '@ionic/core';
 
-@Component({  
+@Component({
   selector: 'app-stories',
   templateUrl: './stories.page.html',
   styleUrls: ['./stories.page.scss'],
@@ -14,7 +14,7 @@ export class StoriesPage implements OnInit {
   isThumbsUpVisible= 1;
   test1;
   stories$;
-  
+
   constructor(
     private menu: MenuController,
     private postImageMaximizeService: PostImageMaximizeService,

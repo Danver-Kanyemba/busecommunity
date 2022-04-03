@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="432px"
+   height="432px"
+   viewBox="0 0 432 432"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="buse app icon.svg"
+   inkscape:export-filename="/home/danverk/Documents/PROJECTS AFTER ATTACHMENT/templates/google3template/resources/android/icon-foreground.png"
+   inkscape:export-xdpi="231.53737"
+   inkscape:export-ydpi="231.53737"
+   inkscape:version="1.1.2 (76b9e6a115, 2022-02-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1714"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.90688833"
+     inkscape:cx="200.13489"
+     inkscape:cy="217.2263"
+     inkscape:window-width="1366"
+     inkscape:window-height="695"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" />
+  <defs
+     id="defs1709">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient30846"
+       id="linearGradient30848"
+       x1="3.2690048"
+       y1="24"
+       x2="44.730995"
+       y2="24"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(8.9922606,0,0,8.9922606,2.4204231,2.2096803)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient30846">
+      <stop
+         style="stop-color:#3880ff;stop-opacity:1;"
+         offset="0"
+         id="stop30842" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="1"
+         id="stop30844" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <rect
+       style="fill:#ffffff;stroke-linecap:round;stroke-linejoin:bevel;paint-order:stroke markers fill"
+       id="rect2274"
+       width="432.97424"
+       height="433.50977"
+       x="0.22344178"
+       y="-1.4296234"
+       ry="0"
+       inkscape:export-filename="/home/danverk/Documents/PROJECTS AFTER ATTACHMENT/templates/google3template/resources/android/icon-foreground.png"
+       inkscape:export-xdpi="231.53737"
+       inkscape:export-ydpi="231.53737" />
+    <path
+       style="opacity:1;fill:url(#linearGradient30848);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect13707"
+       width="372.8371"
+       height="371.36075"
+       x="31.816187"
+       y="32.343613"
+       ry="90.748779"
+       sodipodi:type="rect"
+       clip-path="none"
+       inkscape:export-filename="/home/danverk/Documents/PROJECTS AFTER ATTACHMENT/templates/google3template/src/assets/busecommunity.png"
+       inkscape:export-xdpi="231.53737"
+       inkscape:export-ydpi="231.53737"
+       d="M 122.56497,32.343613 H 313.9045 c 50.27483,0 90.74878,40.473955 90.74878,90.748777 v 189.86319 c 0,50.27483 -40.47395,90.74878 -90.74878,90.74878 H 122.56497 c -50.274828,0 -90.748783,-40.47395 -90.748783,-90.74878 V 123.09239 c 0,-50.274822 40.473955,-90.748777 90.748783,-90.748777 z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:192.235px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.00733"
+       x="147.43181"
+       y="286.07004"
+       id="text4155"
+       mask="none"
+       clip-path="none"
+       inkscape:export-filename="/home/danverk/Documents/PROJECTS AFTER ATTACHMENT/templates/google3template/src/assets/busecommunity.png"
+       inkscape:export-xdpi="231.53737"
+       inkscape:export-ydpi="231.53737"><tspan
+         sodipodi:role="line"
+         id="tspan4153"
+         x="147.43181"
+         y="286.07004"
+         style="font-size:192.235px;stroke-width:6.00733">B</tspan></text>
+  </g>
+</svg>

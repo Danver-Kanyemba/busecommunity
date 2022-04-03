@@ -34,20 +34,40 @@ ion-grid{
   // justify-content: center;
   //  align-items: center;
   height: 100%;
-  ion-row{
-    height: 100%;
-    // max-height;
+  // div{
+  //   height: 100%;
+    ion-row{
+      height: 100%;
+      // max-height;
+    }
+    ion-col{
+      display: flex;
+      justify-content: center;
+      div{
+        max-width: 340px;
+        max-height: 900px;
+        // height: 340px;
+        
+        height:100%;
+        width:100%;
+      }
+  //   }
   }
-  ion-col{
-  display: flex;
-    justify-content: center;
-    div{
-    max-width: 340px;
-    max-height: 900px;
-    // height: 340px;
-    
-    height:100%;
-    width:100%;
+
+}  
+ng-template{
+  height: 100%;
+  ion-grid{
+    height: 100%;
+    ion-row{
+      height: 100%;
+      // max-height;
+    }
+    ion-col{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
     }
   }
-}
+  }
