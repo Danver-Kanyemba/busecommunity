@@ -9,5 +9,10 @@ import { StoriesPage } from '../stories/stories.page';
 export class InsightsPage extends StoriesPage {
 
 
-
+  test5(){
+    console.log(
+      'swiped up'
+    );
+    
+  }
 }

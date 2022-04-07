@@ -26,11 +26,15 @@
                                 <ion-label>App</ion-label>
                         </ion-tab-button>
                         
+                        <ion-tab-button (click)="openMenu()" class="ion-no-margin ion-no-padding">
+                                <ion-icon name="add-circle-outline" size="large"></ion-icon>
+                        </ion-tab-button>                        
+                        
                         <ion-tab-button tab="houses" class="ion-no-margin ion-no-padding">
                                 <ion-icon name="storefront"></ion-icon>
                                 <ion-label>Houses</ion-label>
                         </ion-tab-button>
-                        
+
                         <ion-tab-button tab="food-info" class="ion-no-margin ion-no-padding">
                                 <ion-icon name="fast-food"></ion-icon>
                                 <ion-label>Food</ion-label>

@@ -7,40 +7,6 @@
   style="width: 50px; height: 50px;" 
   src="./assets/busecommunity50.png"></ion-img>
 
-<!-- 
-  <ion-button
-  (click)="clickFacebook()"
-  onclick=''
-  slot="end" 
-  size="small" 
-  shape="round"
-  fill="none" >
-  <ion-icon  
-  color="dark"
-  name="logo-facebook" ></ion-icon>
-</ion-button>
-
-  <ion-button 
-    (click)="clickWhatsapp()"
-    slot="end" 
-    size="small" 
-    shape="round"
-    fill="none">
-    <ion-icon  
-    color="dark"
-    name="logo-whatsapp" ></ion-icon>
-  </ion-button>
-  
-  <ion-button
-    (click)="clickLinkedIn()"
-   slot="end" 
-   size="small" 
-   shape="round"
-   fill="none">
-   <ion-icon  
-   color="dark"
-    name="logo-linkedin" ></ion-icon>
-  </ion-button>   -->
 <ion-buttons >
 
   <ion-tab-button
@@ -68,6 +34,10 @@
                   <ion-img [src]="user.photoURL"></ion-img>
                 </ion-avatar>
   </ion-tab-button>
+
+  <ion-button>
+    <ion-icon slot="icon-only" name="notifications" color="light"></ion-icon>
+  </ion-button>
 </ion-buttons>
 <!-- </div> -->
 

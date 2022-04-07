@@ -19,7 +19,7 @@
   <!-- <div *ngIf="stories$ | async; else loading"    > -->
   <ion-row   *ngFor="let item of ['','']" class="ion-no-margin ion-no-padding">
     <ion-col size="12" class="ion-no-margin ion-no-padding" >
-      <div [style]="{'background-color': 'black'}">
+      <div [style]="{'background-color': 'black'}" on-swipe-up="test5()">
 
         <ion-label>
           <ion-text>

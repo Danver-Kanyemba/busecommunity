@@ -1,7 +1,7 @@
 import { PopOverPage } from './pop-over/pop-over.page';
 import { Component, OnInit } from '@angular/core';
 import { PostImageMaximizeService } from './post-image-maximize.service';
-import { PopoverController } from '@ionic/angular';
+import { MenuController, PopoverController } from '@ionic/angular';
 import { SplashScreen } from '@capacitor/splash-screen';
 
 @Component({
@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   urlForPostImage;
   constructor(
     public popoverController: PopoverController,
+    private menuAdd: MenuController
     ) {
       this.removeSplash();
     }
@@ -21,7 +22,7 @@ export class AppComponent implements OnInit {
   }
   async removeSplash(){
    await SplashScreen.hide();
-  
+
   }
 
 async openPopOver(ev){
@@ -31,5 +32,10 @@ async openPopOver(ev){
     translucent: true,
   });
   return await popover.present();
+  }
+
+  openMenu(){
+    this.menuAdd.open('piz');
+
   }
 }
